@@ -1,0 +1,4 @@
+.env
+node_modules
+tree.ps1
+project-tree.txt
