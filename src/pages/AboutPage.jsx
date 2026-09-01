@@ -98,7 +98,7 @@ const AboutPage = () => (
     />
 
     {/* Story */}
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+    <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
       <Reveal className="relative mx-auto w-full max-w-sm lg:max-w-none">
         <div
           aria-hidden="true"
@@ -149,7 +149,7 @@ const AboutPage = () => (
 
     {/* Values */}
     <section className="border-y border-border/60 bg-sage/30">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <SectionHeading
           eyebrow="My approach"
           title="Five values behind every plan"
@@ -170,7 +170,7 @@ const AboutPage = () => (
     </section>
 
     {/* Credentials — editable placeholders */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <SectionHeading
         eyebrow="Credentials"
         title="Qualifications &amp; registration"
@@ -205,7 +205,7 @@ const AboutPage = () => (
     </section>
 
     {/* CTA */}
-    <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+    <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
       <Reveal>
         <div className="rounded-3xl border border-botanical/25 bg-sage/40 px-6 py-12 text-center md:py-16">
           <h2 className="mx-auto max-w-xl font-serif text-3xl font-medium leading-tight text-primary text-balance">

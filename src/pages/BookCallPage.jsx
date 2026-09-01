@@ -111,7 +111,7 @@ const BookCallPage = () => (
     </section>
 
     {/* Booking layout */}
-    <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+    <section className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         {/* Left — what to expect */}
         <Reveal>

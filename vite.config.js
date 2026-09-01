@@ -384,10 +384,7 @@ export default defineConfig({
 		headers: {
 			'Cross-Origin-Embedder-Policy': 'credentialless',
 		},
-		allowedHosts: [
-			'.app-preview.com',
-			'.app-preview.io',
-		],
+		allowedHosts: true,
 		fs: {
 			strict: true,
 			allow: [

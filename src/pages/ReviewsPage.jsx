@@ -32,7 +32,7 @@ const ReviewsPage = () => (
 
     {/* Summary band */}
     <section className="border-b border-border/60">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 text-center sm:grid-cols-3 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 text-center sm:grid-cols-3 md:px-8">
         <Reveal>
           <p className="font-serif text-4xl font-medium text-primary">5.0</p>
           <div className="mt-2 flex justify-center">
@@ -58,7 +58,7 @@ const ReviewsPage = () => (
     </section>
 
     {/* Review wall */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
         {REVIEWS.map((review, i) => (
           <Reveal key={review.name} delay={(i % 3) * 0.07} className="break-inside-avoid">

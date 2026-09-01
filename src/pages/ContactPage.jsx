@@ -73,7 +73,7 @@ const ContactPage = () => (
       lead="Questions about consultations, packages, or whether nutrition support is right for you — write anytime."
     />
 
-    <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+    <section className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
         <Reveal>
           <h2 className="font-serif text-2xl font-semibold text-primary md:text-3xl">

@@ -35,7 +35,7 @@ const ServicesPage = () => (
     </section>
 
     {/* Service cards */}
-    <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+    <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
       <div className="grid gap-6 md:grid-cols-2 md:gap-7">
         {SERVICES.map((service, i) => (
           <Reveal key={service.title} delay={(i % 2) * 0.06}>
@@ -83,7 +83,7 @@ const ServicesPage = () => (
 
     {/* What makes your plan personal? */}
     <section className="bg-sage/35 border-y border-border/60">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <SectionHeading
           eyebrow="Why it feels different"
           title="What makes your plan personal?"

@@ -24,7 +24,7 @@ const ConditionsPage = () => (
     />
 
     {/* Conditions grid */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {CONDITIONS.map((condition, i) => (
           <Reveal key={condition.name} delay={(i % 3) * 0.06}>

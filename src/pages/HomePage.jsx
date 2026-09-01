@@ -134,7 +134,7 @@ const HomePage = () => (
         aria-hidden="true"
         className="absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-sage/50 blur-3xl"
       />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-16 pt-28 md:px-8 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:pb-24">
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 pb-16 pt-28 md:px-8 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:pb-24">
         <Reveal>
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-botanical">
             Personalised Nutrition Care
@@ -229,7 +229,7 @@ const HomePage = () => (
 
     {/* Trust strip */}
     <section className="border-y border-primary/10 bg-card">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-7 md:flex-row md:justify-between md:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-5 py-7 md:flex-row md:justify-between md:px-8">
         {TRUST_POINTS.map((point) => (
           <div key={point.label} className="flex items-center gap-3">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage text-botanical">
@@ -242,7 +242,7 @@ const HomePage = () => (
     </section>
 
     {/* Areas of Support */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <SectionHeading
         eyebrow="Areas of Support"
         title="Nutrition care, shaped around your needs"
@@ -272,7 +272,7 @@ const HomePage = () => (
 
     {/* How it works */}
     <section className="border-y border-border/60 bg-sage/30">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <SectionHeading
           eyebrow="How it works"
           title="Three clear steps to a healthier table"
@@ -291,7 +291,7 @@ const HomePage = () => (
     </section>
 
     {/* Featured: practical, not restrictive */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <Reveal className="relative order-2 lg:order-1">
           <div aria-hidden="true" className="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-sage" />
@@ -335,7 +335,7 @@ const HomePage = () => (
 
     {/* Packages preview */}
     <section className="border-y border-border/60 bg-card">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading
             align="left"
@@ -427,7 +427,7 @@ const HomePage = () => (
     </section>
 
     {/* Testimonials — placeholder client stories */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <SectionHeading
         eyebrow="Client stories"
         title="Kind, practical guidance — in their own words"
@@ -464,7 +464,7 @@ const HomePage = () => (
     </section>
 
     {/* Final CTA */}
-    <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+    <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
       <Reveal>
         <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-14 text-center md:px-12 md:py-20">
           <div

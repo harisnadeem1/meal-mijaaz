@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Link to="/" className="flex items-center gap-2.5" aria-label="Meal Mizaaj — home">

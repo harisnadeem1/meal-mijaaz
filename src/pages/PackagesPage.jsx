@@ -31,7 +31,7 @@ const PackagesPage = () => (
     />
 
     {/* Pricing cards */}
-    <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <Reveal className="mb-10 text-center">
         <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground">
           All sessions are held online over Google Meet or WhatsApp video. Prices are in Pakistani
@@ -142,7 +142,7 @@ const PackagesPage = () => (
 
     {/* What is included? comparison */}
     <section className="border-t border-border/60 bg-sage/30">
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
         <SectionHeading
           eyebrow="Compare"
           title="What is included?"
