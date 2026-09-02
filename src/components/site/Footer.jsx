@@ -11,19 +11,24 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Link to="/" className="flex items-center gap-2.5" aria-label="Meal Mizaaj — home">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground text-primary">
-                <Sprout className="h-4 w-4" strokeWidth={1.8} />
-              </span>
-              <span className="font-serif text-xl font-semibold tracking-tight">Meal Mizaaj</span>
-            </Link>
+            <Link
+  to="/"
+  className="inline-flex items-center"
+  aria-label="Meal Mizaaj — home"
+>
+  <img
+    src='/logo/logo-white.png'
+    alt="Meal Mizaaj"
+    className="h-10 w-auto object-contain sm:h-11"
+  />
+</Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
               Personalized nutrition consultations, therapeutic meal planning, and coaching —
               built around the food your home already loves.
             </p>
             <div className="mt-5 flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mealmizaaj"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -31,7 +36,7 @@ const Footer = () => {
               >
                 <Instagram className="h-4 w-4" strokeWidth={1.8} />
               </a>
-              <a
+              {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
@@ -46,7 +51,7 @@ const Footer = () => {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/80 transition-colors hover:border-gold hover:text-gold"
               >
                 <Mail className="h-4 w-4" strokeWidth={1.8} />
-              </a>
+              </a> */}
             </div>
           </div>
 

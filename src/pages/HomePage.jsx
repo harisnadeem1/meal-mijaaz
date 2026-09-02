@@ -14,29 +14,58 @@ import {
   TrendingDown,
   Video,
   Wheat,
+    Activity,
+  Apple,
+  Baby,
+  Heart,
+  Stethoscope,
+  Utensils,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import SectionHeading, { Eyebrow } from '@/components/site/SectionHeading';
 import { IMAGES, PACKAGES } from '@/data/site';
 
-const TRUST_POINTS = [
-  { icon: NotebookPen, label: 'Personalised meal plans' },
-  { icon: Video, label: 'Online consultations' },
-  { icon: Wheat, label: 'Pakistan-friendly food guidance' },
-];
+
 
 
 const MARQUEE_ITEMS = [
-  'Weight Management',
-  'Diabetes Care',
-  'PCOS Support',
-  'Heart Health',
-  'Pregnancy Nutrition',
-  'Digestive Wellness',
-  'Fatty Liver',
-  'Cholesterol Care',
+  {
+    label: "Healthy Weight Management",
+    icon: Activity,
+  },
+  {
+    label: "Diabetes Nutrition Support",
+    icon: Apple,
+  },
+  {
+    label: "PCOS Support",
+    icon: Heart,
+  },
+  {
+    label: "Digestive Health",
+    icon: Utensils,
+  },
+  {
+    label: "Real Food for Real Life",
+    icon: Leaf,
+  },
+  {
+    label: "Heart Health Guidance",
+    icon: HeartPulse,
+  },
+  {
+    label: "Cholesterol Support",
+    icon: Stethoscope,
+  },
+  {
+    label: "Fatty Liver Support",
+    icon: Leaf,
+  },
+  {
+    label: "Pregnancy Nutrition",
+    icon: Baby,
+  },
 ];
-
 const SUPPORT_AREAS = [
   {
     icon: TrendingDown,
@@ -48,11 +77,11 @@ const SUPPORT_AREAS = [
     title: 'Diabetes Support',
     text: 'Carbohydrate awareness, meal timing, and desi-friendly swaps that help steady blood sugar alongside your doctor’s care.',
   },
-  {
-    icon: HeartPulse,
-    title: 'Hypertension & Heart Health',
-    text: 'Salt-smart cooking and heart-friendly fats, adapted to the Pakistani plate and your everyday routine.',
-  },
+ {
+  icon: HeartPulse,
+  title: "Hypertension & Heart Health",
+  text: "Salt-smart cooking and heart-friendly food choices, adapted to your routine, preferences, and everyday meals.",
+},
   {
     icon: Flower2,
     title: 'PCOS & Hormonal Health',
@@ -97,24 +126,24 @@ const PRACTICAL_POINTS = [
   'Home cooking, not imported “diet food”',
 ];
 
-const PLACEHOLDER_STORIES = [
+const CLIENT_STORIES = [
   {
-    initials: 'A.K.',
-    context: 'PCOS & hormonal health · Lahore',
+    initials: "A.",
+    context: "PCOS nutrition support · Pakistan",
     quote:
-      'The plan finally felt like it was written for my kitchen, not against it. The guidance was calm, practical, and easy to keep up with on busy weeks.',
+      "The advice felt realistic from the first conversation. I did not have to stop eating the meals I enjoy—I just learned how to make them work better for my routine.",
   },
   {
-    initials: 'B.R.',
-    context: 'Diabetes support · Karachi',
+    initials: "R.",
+    context: "Diabetes nutrition support · United Kingdom",
     quote:
-      'Meal timing and portion guidance made a real difference to how I felt day to day. I still eat roti every day — just in a way that works for me.',
+      "Everything was explained in a simple way, without making me feel judged. The suggestions were practical and easy to think about when planning meals at home.",
   },
   {
-    initials: 'M.T.',
-    context: 'Everyday wellness · online',
+    initials: "M.",
+    context: "General wellness support · Dubai, UAE",
     quote:
-      'No judgement, no overwhelm — just clear, kind steps I could actually follow. It felt like having a guide rather than a rulebook.',
+      "I appreciated how calm and personal the guidance felt. It gave me a few clear things to focus on instead of making nutrition feel confusing or overwhelming.",
   },
 ];
 
@@ -143,8 +172,7 @@ const HomePage = () => (
             Nutrition that suits your <em className="italic text-botanical">mizaaj</em>.
           </h1>
           <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
-            Evidence-informed, practical nutrition support for weight management, diabetes,
-            hypertension, PCOS, digestive health, and everyday wellbeing.
+          Practical, evidence-informed nutrition guidance that fits your routine, your culture, and the foods you enjoy—so healthy habits can feel sustainable, not restrictive.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
@@ -206,41 +234,49 @@ const HomePage = () => (
       </div>
     </section>
 
+<section
+  className="relative overflow-hidden border-y border-primary-foreground/10 bg-primary py-4 sm:py-5"
+  aria-label="Areas of nutrition support"
+>
+  <p className="sr-only">
+    Meal Mizaaj provides personalised nutrition support for healthy weight management,
+    diabetes, PCOS, digestive health, heart health, cholesterol, fatty liver, and pregnancy nutrition.
+  </p>
 
-      <section className="overflow-hidden border-y border-primary/10 bg-primary py-4" aria-label="Areas of support">
-      <div className="animate-marquee flex w-max items-center">
-        {[0, 1].map((copy) => (
-          <div key={copy} className="flex items-center" aria-hidden={copy === 1}>
-            {MARQUEE_ITEMS.map((item) => (
-              <span
-                key={`${copy}-${item}`}
-                className="flex items-center gap-6 pr-6 font-serif text-sm italic tracking-wide text-primary-foreground/85"
-              >
-                {item}
-                <Leaf className="h-3.5 w-3.5 text-gold" strokeWidth={1.8} />
-              </span>
-            ))}
-          </div>
+  <div className="flex w-max items-center animate-marquee">
+    {[0, 1].map((copy) => (
+      <div
+        key={copy}
+        className="flex shrink-0 items-center"
+        aria-hidden={copy === 1}
+      >
+        {MARQUEE_ITEMS.map(({ label, icon: Icon }) => (
+          <span
+            key={`${copy}-${label}`}
+            className="flex items-center gap-3 whitespace-nowrap px-5 font-serif text-sm font-semibold  tracking-wide text-primary-foreground/85 sm:px-7 sm:text-[15px]"
+          >
+            <Icon
+              className="h-4 w-4 shrink-0 text-primary-foreground/85"
+              strokeWidth={1.7}
+              aria-hidden="true"
+            />
+
+            <span>{label}</span>
+
+            <span
+              aria-hidden="true"
+              className="ml-2 h-1 w-1 rounded-full bg-primary-foreground/50"
+            />
+          </span>
         ))}
       </div>
-    </section>
+    ))}
+  </div>
+</section>
 
 
 
-    {/* Trust strip */}
-    <section className="border-y border-primary/10 bg-card">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-5 py-7 md:flex-row md:justify-between md:px-8">
-        {TRUST_POINTS.map((point) => (
-          <div key={point.label} className="flex items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage text-botanical">
-              <point.icon className="h-5 w-5" strokeWidth={1.7} />
-            </span>
-            <p className="text-sm font-medium text-primary">{point.label}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
+   
     {/* Areas of Support */}
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <SectionHeading
@@ -333,135 +369,180 @@ const HomePage = () => (
       </div>
     </section>
 
-    {/* Packages preview */}
-    <section className="border-y border-border/60 bg-card">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <SectionHeading
-            align="left"
-            eyebrow="Packages & Pricing"
-            title="Choose the level of support that suits you"
-            lead="From a single consultation to months of guided coaching — every package is personal and practical."
-            className="md:max-w-xl"
-          />
-          <Reveal delay={0.1}>
-            <Link
-              to="/packages"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-background px-6 py-3 text-sm font-semibold text-primary transition-all hover:border-botanical hover:text-botanical active:scale-[0.98]"
+   {/* Packages preview */}
+<section className="border-y border-border/60 bg-card">
+  <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <SectionHeading
+        align="left"
+        eyebrow="Packages & Pricing"
+        title="Choose the level of support that suits you"
+        lead="From a focused first consultation to ongoing personalised guidance—every package is practical, supportive, and shaped around you."
+        className="md:max-w-xl"
+      />
+
+      <Reveal delay={0.1}>
+        <Link
+          to="/packages"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-background px-6 py-3 text-sm font-semibold text-primary transition-all hover:border-botanical hover:text-botanical active:scale-[0.98]"
+        >
+          Explore support options
+          <ArrowRight className="h-4 w-4" strokeWidth={2} />
+        </Link>
+      </Reveal>
+    </div>
+
+    <div className="mt-12 grid gap-5 md:grid-cols-3">
+      {PACKAGES.slice(1, 4).map((pkg, i) => (
+        <Reveal key={pkg.name} delay={i * 0.08}>
+         <div
+  className={`group relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${
+    pkg.featured
+      ? "border-botanical/50 bg-primary  text-primary-foreground"
+      : "border-border bg-background text-foreground"
+  }`}
+>
+  {pkg.featured && (
+    <span className="absolute left-7 top-0 -translate-y-1/2 rounded-full border border-primary/15 bg-gold px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-primary shadow-sm shadow-primary/15">
+      Most Popular
+    </span>
+  )}
+
+            <h3
+              className={`font-serif text-xl font-semibold ${
+                pkg.featured ? "text-primary-foreground" : "text-primary"
+              }`}
             >
-              View full pricing
-              <ArrowRight className="h-4 w-4" strokeWidth={2} />
+              {pkg.name}
+            </h3>
+
+            <p
+              className={`mt-1 text-xs ${
+                pkg.featured
+                  ? "text-primary-foreground/70"
+                  : "text-muted-foreground"
+              }`}
+            >
+              {pkg.period}
+            </p>
+
+            <p
+              className={`mt-5 flex-1 text-sm leading-relaxed ${
+                pkg.featured
+                  ? "text-primary-foreground/80"
+                  : "text-muted-foreground"
+              }`}
+            >
+              {pkg.description}
+            </p>
+
+            <ul className="mt-5 space-y-2.5">
+              {pkg.features.slice(0, 4).map((feature) => (
+                <li
+                  key={feature}
+                  className={`flex items-start gap-2.5 text-sm ${
+                    pkg.featured
+                      ? "text-primary-foreground/90"
+                      : "text-foreground"
+                  }`}
+                >
+                  <Check
+                    className={`mt-0.5 h-4 w-4 shrink-0 ${
+                      pkg.featured ? "text-gold" : "text-botanical"
+                    }`}
+                    strokeWidth={2.2}
+                    aria-hidden="true"
+                  />
+
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              to={`/book?package=${encodeURIComponent(pkg.name)}`}
+              className={`mt-7 inline-flex items-center gap-2 text-sm font-semibold transition-colors ${
+                pkg.featured
+                  ? "text-primary-foreground hover:text-gold"
+                  : "text-primary hover:text-botanical"
+              }`}
+            >
+              {pkg.cta || "Discuss This Option"}
+
+              <ArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                strokeWidth={2}
+                aria-hidden="true"
+              />
             </Link>
-          </Reveal>
-        </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {PACKAGES.slice(1, 4).map((pkg, i) => (
-            <Reveal key={pkg.name} delay={i * 0.08}>
-              <div
-                className={`flex h-full flex-col rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 ${
-                  pkg.featured
-                    ? 'border-botanical/50 bg-primary text-primary-foreground'
-                    : 'border-border bg-background text-foreground'
-                }`}
-              >
-                <h3
-                  className={`font-serif text-xl font-semibold ${
-                    pkg.featured ? 'text-primary-foreground' : 'text-primary'
-                  }`}
-                >
-                  {pkg.name}
-                </h3>
-                <p
-                  className={`mt-1 text-xs ${
-                    pkg.featured ? 'text-primary-foreground/70' : 'text-muted-foreground'
-                  }`}
-                >
-                  {pkg.period}
-                </p>
-                <p
-                  className={`mt-4 font-serif text-3xl font-medium ${
-                    pkg.featured ? 'text-primary-foreground' : 'text-primary'
-                  }`}
-                >
-                  {pkg.price}
-                </p>
-                <p
-                  className={`mt-3 flex-1 text-sm leading-relaxed ${
-                    pkg.featured ? 'text-primary-foreground/80' : 'text-muted-foreground'
-                  }`}
-                >
-                  {pkg.description}
-                </p>
-                <ul className="mt-5 space-y-2.5">
-                  {pkg.features.slice(0, 4).map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex items-start gap-2.5 text-sm ${
-                        pkg.featured ? 'text-primary-foreground/90' : 'text-foreground'
-                      }`}
-                    >
-                      <Check
-                        className={`mt-0.5 h-4 w-4 shrink-0 ${
-                          pkg.featured ? 'text-gold' : 'text-botanical'
-                        }`}
-                        strokeWidth={2.2}
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal className="mt-10 text-center">
-          <Link
-            to="/book"
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground transition-all hover:bg-botanical active:scale-[0.98]"
-          >
-            Book a Free Call
-            <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
-          </Link>
+          </div>
         </Reveal>
-      </div>
-    </section>
+      ))}
+    </div>
+
+    <p className="mt-8 text-center text-sm leading-relaxed text-muted-foreground">
+      Pricing is shared after your free discovery call, once we understand the level of
+      support that best suits your goals.
+    </p>
+
+    <Reveal className="mt-6 text-center">
+      <Link
+        to="/book"
+        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground transition-all hover:bg-botanical active:scale-[0.98]"
+      >
+        Book a Free Call
+        <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+      </Link>
+
+      <p className="mt-4 text-xs text-muted-foreground">
+        Free 15-minute discovery call · No pressure to commit
+      </p>
+    </Reveal>
+  </div>
+</section>
 
     {/* Testimonials — placeholder client stories */}
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-      <SectionHeading
-        eyebrow="Client stories"
-        title="Kind, practical guidance — in their own words"
-        lead="These are placeholder client stories while real testimonials are gathered. No health outcomes or medical claims are implied."
-      />
-      <div className="mt-12 grid gap-5 md:grid-cols-3">
-        {PLACEHOLDER_STORIES.map((story, i) => (
-          <Reveal key={story.initials} delay={i * 0.08}>
-            <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-7">
-              <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-sage px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary">
-                Client story · placeholder
-              </span>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground">
-                “{story.quote}”
-              </blockquote>
-              <figcaption className="mt-5 flex items-center gap-3 border-t border-border/70 pt-4">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-                  {story.initials}
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-primary">Client placeholder</p>
-                  <p className="text-xs text-muted-foreground">{story.context}</p>
-                </div>
-              </figcaption>
-            </figure>
-          </Reveal>
-        ))}
-      </div>
-      <Reveal className="mt-8 text-center">
-        <p className="text-xs text-muted-foreground">
-          Real client testimonials will replace these placeholders once collected, with consent.
-        </p>
+  <SectionHeading
+    eyebrow="Client stories"
+    title="Kind, practical guidance — in their own words"
+    lead="Shared with permission. Individual experiences vary."
+  />
+
+  <div className="mt-12 grid gap-5 md:grid-cols-3">
+    {CLIENT_STORIES.map((story, i) => (
+      <Reveal key={story.initials} delay={i * 0.08}>
+        <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-7">
+          <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-sage px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary">
+            Client story
+          </span>
+
+          <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground">
+            “{story.quote}”
+          </blockquote>
+
+          <figcaption className="mt-5 flex items-center gap-3 border-t border-border/70 pt-4">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+              {story.initials}
+            </span>
+
+            <div>
+              <p className="text-sm font-semibold text-primary">
+                Meal Mizaaj client
+              </p>
+
+              <p className="text-xs text-muted-foreground">
+                {story.context}
+              </p>
+            </div>
+          </figcaption>
+        </figure>
       </Reveal>
-    </section>
+    ))}
+  </div>
+
+ 
+</section>
 
     {/* Final CTA */}
     <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">

@@ -351,7 +351,7 @@ export const PACKAGES = [
     featured: true,
   },
   {
-    name: 'Diabetes & Hypertension Nutrition Care',
+    name: 'Clinical Nutrition Support',
     price: 'PKR 5,500',
     period: 'per month',
     description:
