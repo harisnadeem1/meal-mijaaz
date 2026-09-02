@@ -12,72 +12,82 @@ import {
   Stethoscope,
   Sprout,
   Scale,
+  BookOpenCheck,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import PageHero from '@/components/site/PageHero';
 import SectionHeading, { Eyebrow } from '@/components/site/SectionHeading';
 import { IMAGES } from '@/data/site';
 
-// Editable placeholder credentials — replace each bracketed field with your
-// real qualifications before publishing. Nothing here is a claim until you do.
 const CREDENTIALS = [
   {
     icon: GraduationCap,
-    title: 'Degree',
-    placeholder: '[Your degree — e.g., BSc (Hons) Human Nutrition & Dietetics]',
-    hint: 'Add the qualification you earned and the awarding institution.',
-  },
-  {
-    icon: ScrollText,
-    title: 'Training',
-    placeholder: '[Clinical training / internship — e.g., dietetic internship at …]',
-    hint: 'List supervised clinical training or relevant residencies.',
+    title: "Education",
+    detail: "BS Human Nutrition & Dietetics",
+    supportingText:
+      "University of Management and Technology · 2022–2026",
   },
   {
     icon: Stethoscope,
-    title: 'Clinical experience',
-    placeholder: '[Years and settings — e.g., X years across clinic and hospital practice]',
-    hint: 'Describe where and how long you have practised.',
+    title: "Ittefaq Hospital",
+    detail: "Nutrition & Dietetics Internship",
+    supportingText:
+      "Hospital-based exposure to nutrition assessment, diet planning, and patient-focused dietary interventions.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Al Noor Hospital",
+    detail: "Nutrition & Dietetics Internship",
+    supportingText:
+      "Clinical nutrition learning and dietary planning experience under hospital supervision.",
+  },
+  {
+    icon: ScrollText,
+    title: "Hameed Latif Hospital",
+    detail: "Nutrition & Dietetics Internship",
+    supportingText:
+      "Exposure to nutrition assessment, dietetics practice, and patient-centred nutrition support.",
   },
   {
     icon: Award,
-    title: 'Certifications',
-    placeholder: '[Certifications — e.g., certified nutrition specialist, …]',
-    hint: 'Add any additional certifications or specialisations.',
+    title: "Community Health Learning",
+    detail: "Sehat Safar Program",
+    supportingText:
+      "Participated in a health and community-welfare programme focused on public health awareness.",
   },
   {
-    icon: Scale,
-    title: 'Professional registration',
-    placeholder: '[Registration — e.g., registered with the Pakistan Nutrition & Dietetic Society]',
-    hint: 'Name the professional body you are registered or licensed with.',
+    icon: BookOpenCheck,
+    title: "Continuing Learning",
+    detail: "Nutrition & Food Science Conferences",
+    supportingText:
+      "Participant in professional conferences focused on food science, functional foods, and nutraceuticals.",
   },
 ];
 
 const VALUES = [
   {
     icon: PencilLine,
-    title: 'Personalised',
-    text: 'No two bodies, routines, or kitchens are the same. Your plan is built around you — not a template.',
+    number: "01",
+    title: "Personalised",
+    text: "Your guidance begins with your goals, routines, preferences, and health needs—not a generic template.",
   },
   {
     icon: HeartHandshake,
-    title: 'Compassionate',
-    text: 'No scolding, no shame. Honest conversations about habits, met with warmth and patience.',
+    number: "02",
+    title: "Compassionate",
+    text: "A supportive, judgement-free space to talk honestly about food, habits, and the changes that feel possible.",
   },
   {
     icon: Leaf,
-    title: 'Practical',
-    text: 'Advice that fits a real week — busy days, family meals, dawats, travel, and Ramzan included.',
+    number: "03",
+    title: "Practical",
+    text: "Clear nutrition guidance built for everyday meals, busy schedules, social plans, travel, and family life.",
   },
   {
     icon: Sprout,
-    title: 'Culturally relevant',
-    text: 'Desi home cooking is the starting point, not the problem. Roti, daal, sabzi, and chai all have a place.',
-  },
-  {
-    icon: ScrollText,
-    title: 'Sustainable',
-    text: 'Slow, steady habits you can keep for years — never crash diets or rules that collapse by week three.',
+    number: "04",
+    title: "Sustainable",
+    text: "Small, realistic habits designed to support your health over time—without crash diets or rigid rules.",
   },
 ];
 
@@ -111,32 +121,37 @@ const AboutPage = () => (
           loading="lazy"
         />
         <p className="mt-3 text-center text-xs text-muted-foreground">
-          [Replace this photo with your professional portrait.]
         </p>
       </Reveal>
       <Reveal delay={0.1}>
         <Eyebrow>My story</Eyebrow>
-        <h2 className="mt-4 font-serif text-3xl font-medium leading-tight tracking-tight text-primary text-balance md:text-4xl">
-          Assalam-o-alaikum — I’m so glad you’re here
-        </h2>
-        <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
-          <p>
-            I grew up in a home where food was love — daal on quiet evenings, karahi on weekends,
-            and chai that fixed everything. When I trained as a dietitian, I noticed something
-            troubling: most nutrition advice asked people to abandon exactly those tables.
-          </p>
-          <p>
-            Meal Mizaaj was born from a simple conviction — that Pakistani home cooking and good
-            health are not enemies. My work supports people managing weight, blood sugar, blood
-            pressure, cholesterol, fatty liver, PCOS, digestion, and pregnancy nutrition without
-            giving up the food their families gather around.
-          </p>
-          <p>
-            My approach is personal, unhurried, and honest. We look at your reports, your routine,
-            your sleep and stress — and then we build a way of eating that your body and your
-            household can actually keep.
-          </p>
-        </div>
+      <h2 className="mt-4 font-serif text-3xl font-medium leading-tight tracking-tight text-primary text-balance md:text-4xl">
+  I’m glad you’re here.
+</h2>
+
+<div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
+  <p>
+    I have always believed that food is about more than nutrition. It is comfort,
+    connection, routine, culture, and the small everyday moments that make life feel like home.
+    Yet so much nutrition advice still asks people to start over with unfamiliar foods,
+    complicated rules, and plans that are difficult to maintain.
+  </p>
+
+  <p>
+    Meal Mizaaj was created from a simple belief: healthy eating should work with your
+    life, not against it. I support people with weight-management goals, blood sugar and
+    blood-pressure concerns, cholesterol, fatty liver, PCOS, digestive health, pregnancy
+    nutrition, and everyday wellbeing—without asking them to give up the foods and meals
+    they genuinely enjoy.
+  </p>
+
+  <p>
+    My approach is personal, practical, and unhurried. We look at your goals, lifestyle,
+    food preferences, daily routine, and any relevant health information you choose to
+    share. Then we build realistic nutrition habits that feel clear, supportive, and
+    sustainable over time.
+  </p>
+</div>
         <Link
           to="/book"
           className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground transition-all hover:bg-botanical active:scale-[0.98]"
@@ -148,61 +163,107 @@ const AboutPage = () => (
     </section>
 
     {/* Values */}
-    <section className="border-y border-border/60 bg-sage/30">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <SectionHeading
-          eyebrow="My approach"
-          title="Five values behind every plan"
-          lead="The principles that shape every consultation, meal plan, and follow-up message."
-        />
-        <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
-          {VALUES.map((v, i) => (
-            <Reveal key={v.title} delay={i * 0.07} className="border-t-2 border-primary/15 pt-6">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sage text-botanical">
-                <v.icon className="h-5 w-5" strokeWidth={1.7} />
+<section className="border-y border-border/60 bg-sage/30">
+  <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <SectionHeading
+      eyebrow="The Meal Mizaaj Way"
+      title="Thoughtful support, built around real life"
+      lead="A calmer, more practical approach to nutrition—designed around you, not a list of rules."
+    />
+
+    <div className="mt-12 grid gap-5 sm:grid-cols-2">
+      {VALUES.map((value, i) => {
+        const Icon = value.icon;
+
+        return (
+          <Reveal key={value.title} delay={i * 0.08}>
+            <article className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-botanical/35 hover:shadow-lg hover:shadow-primary/5 md:p-8">
+              {/* Small number in the top-right corner */}
+              <span
+                aria-hidden="true"
+                className="absolute right-7 top-6 font-serif text-4xl italic leading-none text-primary/10 transition-colors duration-300 group-hover:text-botanical/20"
+              >
+                {value.number}
               </span>
-              <h3 className="mt-4 font-serif text-xl font-semibold text-primary">{v.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
+
+              {/* Thin decorative line */}
+              <span
+                aria-hidden="true"
+                className="absolute left-7 top-0 h-px w-12 bg-gold/80 transition-all duration-300 group-hover:w-20"
+              />
+<div className="flex items-center gap-4">
+  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+    <Icon className="h-5 w-5" strokeWidth={1.7} />
+  </span>
+
+  <h3 className="font-serif text-2xl font-semibold text-primary">
+    {value.title}
+  </h3>
+</div>
+
+              <p className="mt-3 max-w-md text-base leading-relaxed text-muted-foreground">
+                {value.text}
+              </p>
+            </article>
+          </Reveal>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
     {/* Credentials — editable placeholders */}
-    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-      <SectionHeading
-        eyebrow="Credentials"
-        title="Qualifications &amp; registration"
-        lead="These fields are ready for you to complete with your verified credentials before publishing."
-      />
-      <Reveal className="mx-auto mt-6 max-w-2xl">
-        <div className="flex items-start gap-3 rounded-2xl border border-gold/40 bg-gold/10 p-4 text-sm leading-relaxed text-foreground">
-          <PencilLine className="mt-0.5 h-5 w-5 shrink-0 text-gold" strokeWidth={1.7} />
-          <p>
-            <span className="font-semibold text-primary">Placeholder fields.</span> The details
-            below are editable placeholders — replace each one with your own verified
-            qualifications. No credentials are claimed until you add them.
-          </p>
-        </div>
-      </Reveal>
-      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {CREDENTIALS.map((c, i) => (
-          <Reveal key={c.title} delay={i * 0.06}>
-            <div className="h-full rounded-2xl border border-dashed border-border bg-card p-7">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sage text-primary">
-                <c.icon className="h-5 w-5" strokeWidth={1.7} />
+    {/* Background & Training */}
+<section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+  <SectionHeading
+    eyebrow="Background & Training"
+    title="Education, clinical learning & continued development"
+    lead="My approach is shaped by formal nutrition education, hospital-based internship exposure, and continued learning in nutrition and dietetics."
+  />
+
+  <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {CREDENTIALS.map((credential, i) => {
+      const Icon = credential.icon;
+
+      return (
+        <Reveal key={credential.title} delay={i * 0.06}>
+          <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-botanical/35 hover:shadow-lg hover:shadow-primary/5">
+            <span
+              aria-hidden="true"
+              className="absolute left-7 top-0 h-px w-10 bg-gold/80 transition-all duration-300 group-hover:w-16"
+            />
+
+            <div className="flex items-center gap-3.5">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sage text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                <Icon className="h-5 w-5" strokeWidth={1.7} />
               </span>
-              <h3 className="mt-5 font-serif text-lg font-semibold text-primary">{c.title}</h3>
-              <p className="mt-2 rounded-lg bg-cream/70 px-3 py-2 text-sm italic leading-relaxed text-muted-foreground">
-                {c.placeholder}
-              </p>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c.hint}</p>
+
+              <h3 className="font-serif text-lg font-semibold leading-tight text-primary">
+                {credential.title}
+              </h3>
             </div>
-          </Reveal>
-        ))}
-      </div>
-    </section>
+
+            <p className="mt-6 font-serif text-lg font-medium leading-snug text-primary">
+              {credential.detail}
+            </p>
+
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {credential.supportingText}
+            </p>
+          </article>
+        </Reveal>
+      );
+    })}
+  </div>
+
+  <Reveal className="mx-auto mt-8 max-w-3xl">
+    <div className="rounded-2xl border border-border bg-sage/35 px-5 py-4 text-center text-xs leading-relaxed text-muted-foreground">
+      Meal Mizaaj provides personalised nutrition education and dietary guidance. It does not
+      replace medical diagnosis, emergency care, medication advice, or treatment from a physician
+      or healthcare team.
+    </div>
+  </Reveal>
+</section>
 
     {/* CTA */}
     <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
