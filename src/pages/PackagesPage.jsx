@@ -257,46 +257,82 @@ const PackagesPage = () => (
             </table>
           </div>
 
-          {/* Mobile stacked cards */}
-          <div className="space-y-5 md:hidden">
-            {PACKAGES.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={cn(
-                  'rounded-2xl border bg-card p-5',
-                  pkg.featured ? 'border-botanical/50' : 'border-border',
+         {/* Mobile stacked cards */}
+<div className="space-y-5 md:hidden">
+  {PACKAGES.map((pkg, packageIndex) => (
+    <div
+      key={pkg.name}
+      className={cn(
+        'overflow-hidden rounded-2xl border bg-card',
+        pkg.featured ? 'border-botanical/50' : 'border-border',
+      )}
+    >
+      {/* Card heading */}
+      <div
+        className={cn(
+          'border-b border-border/70 px-5 py-4',
+          pkg.featured ? 'bg-sage/45' : 'bg-cream/50',
+        )}
+      >
+        <div className="flex items-center justify-between gap-3">
+          <h3 className="font-serif text-lg font-semibold leading-snug text-primary">
+            {pkg.name}
+          </h3>
+
+          {pkg.featured && (
+            <span className="shrink-0 rounded-full bg-gold px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-primary">
+              Popular
+            </span>
+          )}
+        </div>
+
+        {pkg.details && (
+          <p className="mt-1.5 text-xs font-medium uppercase tracking-[0.12em] text-botanical">
+            {pkg.details}
+          </p>
+        )}
+      </div>
+
+      {/* Comparison rows */}
+      <ul className="divide-y divide-border/60">
+        {PACKAGE_COMPARISON.map((row) => {
+          const val = row.values[packageIndex];
+
+          return (
+            <li key={row.feature} className="px-5 py-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                {row.feature}
+              </p>
+
+              <div className="mt-2 flex items-start gap-2.5 text-sm leading-relaxed text-foreground">
+                {val === true ? (
+                  <>
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage text-botanical">
+                      <Check className="h-3 w-3" strokeWidth={2.5} />
+                    </span>
+                    <span>Included</span>
+                  </>
+                ) : val === false ? (
+                  <>
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                      <Minus className="h-3 w-3" strokeWidth={2} />
+                    </span>
+                    <span className="text-muted-foreground">Not included</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    <span className="min-w-0 break-words">{val}</span>
+                  </>
                 )}
-              >
-                <h3 className="font-serif text-base font-semibold text-primary">{pkg.name}</h3>
-                <ul className="mt-3 space-y-2">
-                  {PACKAGE_COMPARISON.map((row) => {
-                    const val = row.values[PACKAGES.indexOf(pkg)];
-                    return (
-                      <li
-                        key={row.feature}
-                        className="flex items-center justify-between gap-3 border-b border-border/50 pb-2 text-sm last:border-0 last:pb-0"
-                      >
-                        <span className="text-muted-foreground">{row.feature}</span>
-                        <span className="shrink-0 font-medium text-foreground">
-                          {val === true ? (
-                            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-sage text-botanical">
-                              <Check className="h-3 w-3" strokeWidth={2.5} />
-                            </span>
-                          ) : val === false ? (
-                            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-muted text-muted-foreground">
-                              <Minus className="h-3 w-3" strokeWidth={2} />
-                            </span>
-                          ) : (
-                            val
-                          )}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
               </div>
-            ))}
-          </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  ))}
+</div>
         </Reveal>
       </div>
     </section>
