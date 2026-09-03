@@ -174,7 +174,7 @@ const BookCallPage = () => (
                     Choose a date and time
                   </p>
                   <h2 className="mt-1 font-serif text-2xl font-semibold text-primary md:text-3xl">
-                    Request your free call
+                    Request Free Call
                   </h2>
                 </div>
               </div>

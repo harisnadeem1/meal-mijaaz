@@ -190,24 +190,29 @@ const BookingForm = () => {
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-7">
       {/* Appointment type — fixed selection */}
-      <div className="rounded-2xl border border-botanical/30 bg-sage/40 p-4">
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-botanical/15 text-botanical">
-              <Sparkles className="h-5 w-5" strokeWidth={1.7} />
-            </span>
-            <div>
-              <p className="font-serif text-base font-semibold text-primary">
-                Free 15-Minute Discovery Call
-              </p>
-              <p className="text-xs text-muted-foreground">Online · Google Meet or WhatsApp video</p>
-            </div>
-          </div>
-          <span className="rounded-full bg-botanical px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground">
-            Free — 15 min
-          </span>
-        </div>
+     <div className="rounded-2xl border border-botanical/30 bg-sage/40 p-4 sm:p-5">
+  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex min-w-0 items-start gap-3">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-botanical/15 text-botanical">
+        <Sparkles className="h-5 w-5" strokeWidth={1.7} />
+      </span>
+
+      <div className="min-w-0">
+        <p className="font-serif text-base font-semibold leading-snug text-primary sm:text-lg">
+          Free 15-Minute Discovery Call
+        </p>
+
+        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+          Online via Google Meet or WhatsApp
+        </p>
       </div>
+    </div>
+
+    <span className="inline-flex w-fit shrink-0 items-center rounded-full bg-botanical px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary-foreground sm:ml-3">
+      Free · 15 min
+    </span>
+  </div>
+</div>
 
       {/* Date selection */}
       <div className="space-y-3">

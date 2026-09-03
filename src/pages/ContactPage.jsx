@@ -23,22 +23,26 @@ const ContactMethod = ({ icon: Icon, title, value, note, href, external = false 
         <Icon className="h-5 w-5" strokeWidth={1.7} />
       </span>
 
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-botanical">
           {title}
         </p>
-        <p className="mt-1 truncate text-sm font-semibold text-primary">{value}</p>
+
+        <p className="mt-1 break-all text-sm font-semibold leading-relaxed text-primary">
+          {value}
+        </p>
+
         <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{note}</p>
       </div>
 
       {href && (
-        <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-botanical" />
+        <ArrowUpRight className="h-4 w-4 shrink-0 self-start text-muted-foreground transition-colors group-hover:text-botanical" />
       )}
     </>
   );
 
   const className =
-    'group flex min-h-[104px] items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-botanical/40 hover:shadow-md hover:shadow-primary/[0.04]';
+    'group flex min-h-[104px] min-w-0 items-start gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-botanical/40 hover:shadow-md hover:shadow-primary/[0.04]';
 
   if (!href) {
     return <div className={className}>{content}</div>;
