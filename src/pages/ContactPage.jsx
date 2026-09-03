@@ -15,6 +15,7 @@ import Reveal from '@/components/Reveal';
 import PageHero from '@/components/site/PageHero';
 import InquiryForm from '@/components/site/InquiryForm';
 import { CONTACT } from '@/data/site';
+import Seo from '@/components/Seo';
 
 const ContactMethod = ({ icon: Icon, title, value, note, href, external = false }) => {
   const content = (
@@ -72,6 +73,14 @@ const ContactPage = () => {
           content="Contact Meal Mizaaj to ask about personalised nutrition support, book a free discovery call, or share your nutrition goals. Online consultations are available worldwide."
         />
       </Helmet>
+
+      <Seo
+  title="Contact Meal Mizaaj | Personalised Nutrition Support"
+  description="Contact Meal Mizaaj for personalised, practical, evidence-informed nutrition support. Ask a question, explore nutrition services, or book a free discovery call."
+  image="/og-meal-mizaaj.jpg"
+  siteName="Meal Mizaaj"
+  imageAlt="Contact Meal Mizaaj for personalised nutrition support"
+/>
 
       <PageHero
         eyebrow="Contact"

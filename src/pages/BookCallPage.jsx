@@ -16,6 +16,8 @@ import {
 import Reveal from '@/components/Reveal';
 import BookingForm from '@/components/site/BookingForm';
 import { Eyebrow } from '@/components/site/SectionHeading';
+import Seo from '@/components/Seo';
+
 
 const CALL_POINTS = [
   {
@@ -104,6 +106,14 @@ const BookCallPage = () => (
         content="Book a free 15-minute discovery call with Meal Mizaaj. Share your nutrition goals, ask your questions, and explore personalised nutrition support with no obligation."
       />
     </Helmet>
+
+    <Seo
+  title="Book a Free 15-Minute Nutrition Call | Meal Mizaaj"
+  description="Book a free 15-minute Meal Mizaaj discovery call to discuss your nutrition goals, ask questions, and explore personalised practical support."
+  image="/og-meal-mizaaj.jpg"
+  siteName="Meal Mizaaj"
+  imageAlt="Book a free 15-minute Meal Mizaaj nutrition discovery call"
+/>
 
     {/* Hero */}
     <section className="relative overflow-hidden border-b border-border/60 bg-sage/35">
