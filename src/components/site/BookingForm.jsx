@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import {
   CalendarCheck,
   CheckCircle2,
@@ -24,6 +25,10 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_BOOKING_TEMPLATE_ID =
+  import.meta.env.VITE_EMAILJS_BOOKING_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const GOALS = [
   'Weight loss',
@@ -125,29 +130,56 @@ const BookingForm = () => {
     setErrors(next);
     return Object.keys(next).length === 0;
   };
+const onSubmit = async (e) => {
+  e.preventDefault();
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setStatus('submitting');
-    try {
-      await pb.collection('inquiries').create({
-        type: 'booking',
-        name: form.name.trim(),
-        email: form.email.trim(),
-        phone: form.phone.trim(),
-        goal: form.goal,
-        preferred_date: selectedDayLabel,
-        preferred_time: selectedTime,
-        message: form.message.trim() || '—',
-      });
-      setStatus('success');
-      toast.success('Your free call is booked.');
-    } catch {
-      setStatus('idle');
-      toast.error('Something went wrong — please try again in a moment.');
-    }
+  if (!validate()) return;
+
+  setStatus('submitting');
+
+  const cleanForm = {
+    name: form.name.trim(),
+    email: form.email.trim(),
+    phone: form.phone.trim(),
+    goal: form.goal,
+    message: form.message.trim() || 'No additional note provided.',
   };
+
+  const templateParams = {
+    customer_name: cleanForm.name,
+    customer_email: cleanForm.email,
+    customer_phone: cleanForm.phone,
+    goal: cleanForm.goal,
+    preferred_date: selectedDayLabel,
+    preferred_time: selectedTime,
+    message: cleanForm.message,
+  };
+
+  try {
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_BOOKING_TEMPLATE_ID,
+      templateParams,
+      {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      }
+    );
+
+    setStatus('success');
+
+    toast.success(
+      'Your free call request has been sent. Please check your email for a copy.'
+    );
+  } catch (error) {
+    console.error('Booking form EmailJS error:', error);
+
+    setStatus('idle');
+
+    toast.error(
+      'Unable to send your booking request. Please try again in a moment.'
+    );
+  }
+};
 
   if (status === 'success') {
     return (

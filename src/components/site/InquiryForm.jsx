@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { CheckCircle2, Loader2, Send } from 'lucide-react';
 import { toast } from 'sonner';
 import pb from '@/lib/pocketbaseClient';
@@ -13,6 +14,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_CONTACT_TEMPLATE_ID =
+  import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const GOALS = [
   'Healthy weight loss',
@@ -83,28 +90,54 @@ const InquiryForm = ({ type }) => {
     return Object.keys(next).length === 0;
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setStatus('submitting');
-    try {
-      await pb.collection('inquiries').create({
-        type,
-        name: form.name.trim(),
-        email: form.email.trim(),
-        phone: form.phone.trim(),
-        goal: form.goal,
-        preferred_time: form.preferredTime,
-        subject: form.subject,
-        message: form.message.trim(),
-      });
-      setStatus('success');
-      toast.success(isBooking ? 'Your free call request is in.' : 'Message sent.');
-    } catch {
-      setStatus('idle');
-      toast.error('Something went wrong — please try again in a moment.');
-    }
+ const onSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!validate()) return;
+
+  setStatus('submitting');
+
+  const cleanForm = {
+    name: form.name.trim(),
+    email: form.email.trim(),
+    phone: form.phone.trim(),
+    subject: form.subject || 'General question',
+    message: form.message.trim(),
   };
+
+  const templateParams = {
+    customer_name: cleanForm.name,
+    customer_email: cleanForm.email,
+    customer_phone: cleanForm.phone,
+    subject: cleanForm.subject,
+    message: cleanForm.message,
+  };
+
+  try {
+   
+
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_CONTACT_TEMPLATE_ID,
+      templateParams,
+      {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      }
+    );
+
+    setStatus('success');
+
+    toast.success('Message sent. Please check your email for a copy.');
+  } catch (error) {
+    console.error('Contact form submission error:', error);
+
+    setStatus('idle');
+
+    toast.error(
+      'Something went wrong — please try again in a moment or contact us via WhatsApp.'
+    );
+  }
+};
 
   if (status === 'success') {
     return (

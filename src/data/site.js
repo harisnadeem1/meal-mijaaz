@@ -36,13 +36,13 @@ export const IMAGES = {
 };
 
 export const CONTACT = {
-  email: 'hello@mealmizaaj.com',
+  email: 'contact@mealmizaaj.com',
   phone: '+92 300 123 4567',
   whatsapp: '+92 300 123 4567',
   instagram: '@mealmizaaj',
   instagramUrl: 'https://instagram.com/mealmizaaj',
   location: 'Lahore, Pakistan',
-  onlineAvailability: 'Online consultations worldwide · In-person in Lahore',
+  onlineAvailability: 'Online consultations worldwide',
   hours: 'Monday – Saturday, 10:00 – 19:00 (PKT)',
 };
 
