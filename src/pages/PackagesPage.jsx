@@ -34,8 +34,9 @@ const PackagesPage = () => (
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <Reveal className="mb-10 text-center">
         <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          All sessions are held online over Google Meet or WhatsApp video. Prices are in Pakistani
-          Rupees. Not sure which fits? Start with a free discovery call and we will decide together.
+          Every person’s goals, routine, and support needs are different. Book a free 15-minute
+          discovery call to talk through what you need, explore the most suitable option, and receive
+          clear fee details before deciding.
         </p>
       </Reveal>
 
@@ -48,68 +49,75 @@ const PackagesPage = () => (
           >
             <article
               className={cn(
-                'relative flex h-full flex-col rounded-3xl border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5',
+                'relative flex h-full flex-col rounded-3xl border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 md:p-8',
                 pkg.featured
-                  ? 'border-botanical/60 ring-1 ring-botanical/30'
+                  ? 'border-botanical/60 ring-1 ring-botanical/25'
                   : 'border-border',
               )}
             >
               {pkg.featured && (
                 <span className="absolute -top-3 left-7 inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary">
                   <Sparkles className="h-3 w-3" strokeWidth={2} />
-                  Most Popular
+                  Popular choice
                 </span>
               )}
 
               <h2 className="font-serif text-xl font-semibold text-primary">{pkg.name}</h2>
-              <p className="mt-1 text-xs text-muted-foreground">{pkg.period}</p>
 
-              <p className="mt-4 font-serif text-4xl font-medium text-primary">
-                {pkg.price}
-                {pkg.period.includes('month') && (
-                  <span className="ml-1 text-sm font-normal text-muted-foreground">/month</span>
-                )}
-              </p>
+              {pkg.details && (
+                <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-botanical">
+                  {pkg.details}
+                </p>
+              )}
 
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 {pkg.description}
               </p>
 
-              <ul className="mt-6 flex-1 space-y-2.5">
-                {pkg.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm text-foreground">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage text-botanical">
-                      <Check className="h-3 w-3" strokeWidth={2.5} />
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              {pkg.bestFor && (
+                <div className="mt-5 rounded-2xl border border-botanical/10 bg-sage/35 px-4 py-3.5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-botanical">
+                    Best for
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-foreground">{pkg.bestFor}</p>
+                </div>
+              )}
+
+              <div className="mt-6 border-t border-border/70 pt-5">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-botanical">
+                  What is included
+                </p>
+
+                <ul className="mt-4 flex-1 space-y-2.5">
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2.5 text-sm text-foreground">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage text-botanical">
+                        <Check className="h-3 w-3" strokeWidth={2.5} />
+                      </span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               {pkg.note && (
-                <p className="mt-4 rounded-xl bg-sage/40 px-3.5 py-2.5 text-xs leading-relaxed text-botanical">
+                <p className="mt-5 rounded-xl bg-sage/40 px-3.5 py-3 text-xs leading-relaxed text-botanical">
                   {pkg.note}
                 </p>
               )}
 
-              <div className="mt-7 flex flex-col gap-2.5">
+              <div className="mt-7">
                 <Link
                   to="/book"
                   className={cn(
-                    'inline-flex h-12 items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all active:scale-[0.98]',
+                    'inline-flex h-12 w-full items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all active:scale-[0.98]',
                     pkg.featured
                       ? 'bg-primary text-primary-foreground hover:bg-botanical'
-                      : 'bg-primary text-primary-foreground hover:bg-botanical',
+                      : 'border border-primary/25 bg-cream text-primary hover:border-botanical hover:text-botanical',
                   )}
                 >
-                  {pkg.cta}
+                  Discuss This Option
                   <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
-                </Link>
-                <Link
-                  to="/book"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary/25 bg-cream text-sm font-semibold text-primary transition-all hover:border-botanical hover:text-botanical active:scale-[0.98]"
-                >
-                  Book a Free Call
                 </Link>
               </div>
             </article>
@@ -118,19 +126,57 @@ const PackagesPage = () => (
 
         {/* Free discovery call card */}
         <Reveal delay={PACKAGES.length * 0.06} className="h-full">
-          <article className="flex h-full flex-col justify-between rounded-3xl border border-dashed border-botanical/40 bg-sage/20 p-7">
-            <div>
-              <h2 className="font-serif text-xl font-semibold text-primary">Free Discovery Call</h2>
-              <p className="mt-1 text-xs text-muted-foreground">15 minutes · no obligation</p>
-              <p className="mt-4 font-serif text-4xl font-medium text-primary">Free</p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                A gentle first conversation to share your goals, understand how I work, and decide
-                together which package fits — with zero pressure.
+          <article className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-dashed border-botanical/45 bg-sage/20 p-7 md:p-8">
+            <div
+              aria-hidden="true"
+              className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/10 blur-2xl"
+            />
+
+            <div className="relative">
+              <span className="inline-flex items-center rounded-full bg-card px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-botanical">
+                A gentle first step
+              </span>
+
+              <h2 className="mt-5 font-serif text-2xl font-semibold text-primary">
+                Free Discovery Call
+              </h2>
+
+              <p className="mt-2 text-xs font-medium uppercase tracking-[0.14em] text-botanical">
+                15 minutes · no obligation
               </p>
+
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                A relaxed first conversation to share your goals, understand how Meal Mizaaj can
+                support you, and decide together which level of guidance feels right.
+              </p>
+
+              <ul className="mt-6 space-y-2.5">
+                <li className="flex items-start gap-2.5 text-sm text-foreground">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-card text-botanical">
+                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                  </span>
+                  Talk through your nutrition goals
+                </li>
+
+                <li className="flex items-start gap-2.5 text-sm text-foreground">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-card text-botanical">
+                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                  </span>
+                  Understand the support options available
+                </li>
+
+                <li className="flex items-start gap-2.5 text-sm text-foreground">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-card text-botanical">
+                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                  </span>
+                  Receive clear fee details before deciding
+                </li>
+              </ul>
             </div>
+
             <Link
               to="/book"
-              className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary/30 bg-card text-sm font-semibold text-primary transition-all hover:border-botanical hover:text-botanical active:scale-[0.98]"
+              className="relative mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-sm font-semibold text-primary-foreground transition-all hover:bg-botanical active:scale-[0.98]"
             >
               Book a Free Call
               <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
@@ -138,6 +184,13 @@ const PackagesPage = () => (
           </article>
         </Reveal>
       </div>
+
+      <Reveal delay={0.1}>
+        <p className="mx-auto mt-8 max-w-xl text-center text-xs leading-relaxed text-muted-foreground">
+          Fees are shared clearly before any paid consultation or support plan is confirmed. There is
+          no obligation to continue after your free discovery call.
+        </p>
+      </Reveal>
     </section>
 
     {/* What is included? comparison */}

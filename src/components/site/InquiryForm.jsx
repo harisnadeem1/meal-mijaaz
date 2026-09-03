@@ -54,7 +54,7 @@ const initialState = {
 };
 
 const fieldClasses =
-  'h-12 rounded-xl border-input bg-cream/60 px-4 text-sm focus-visible:ring-botanical';
+  'h-12 rounded-xl border-input bg-cream/60 px-4 text-base focus-visible:ring-botanical';
 
 const InquiryForm = ({ type }) => {
   const isBooking = type === 'booking';
@@ -73,6 +73,9 @@ const InquiryForm = ({ type }) => {
     if (!form.name.trim()) next.name = 'Please share your name.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
       next.email = 'Please enter a valid email address.';
+    if (!form.phone.trim()) {
+      next.phone = 'Please enter a phone or WhatsApp number.';
+    }
     if (isBooking && !form.goal) next.goal = 'Please choose the closest goal.';
     if (!form.message.trim() || form.message.trim().length < 10)
       next.message = 'A sentence or two helps me prepare (min. 10 characters).';
@@ -162,8 +165,9 @@ const InquiryForm = ({ type }) => {
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor={`${type}-phone`}>
-            {isBooking ? 'Phone / WhatsApp (optional)' : 'WhatsApp number (optional)'}
+            {isBooking ? 'Phone / WhatsApp number' : 'WhatsApp number'}
           </Label>
+
           <Input
             id={`${type}-phone`}
             type="tel"
@@ -173,6 +177,8 @@ const InquiryForm = ({ type }) => {
             autoComplete="tel"
             className={fieldClasses}
           />
+
+          {errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
         </div>
         {isBooking && (
           <div className="space-y-2">
@@ -224,7 +230,7 @@ const InquiryForm = ({ type }) => {
               ? 'A little about your health, routine, or what has (and hasn’t) worked before…'
               : 'Write your message here…'
           }
-          className="rounded-xl border-input bg-cream/60 px-4 py-3 text-sm focus-visible:ring-botanical"
+          className="rounded-xl border-input bg-cream/60 px-4 py-3 text-base focus-visible:ring-botanical"
         />
         {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
       </div>

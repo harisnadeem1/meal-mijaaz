@@ -87,7 +87,7 @@ const initialState = {
 };
 
 const fieldClasses =
-  'h-12 rounded-xl border-input bg-cream/60 px-4 text-sm focus-visible:ring-botanical';
+  'h-12 rounded-xl border-input bg-cream/60 px-4 text-base focus-visible:ring-botanical';
 
 const BookingForm = () => {
   const days = useMemo(() => buildAvailableDays().map(formatDay), []);
@@ -357,7 +357,7 @@ const BookingForm = () => {
             onChange={set('message')}
             rows={3}
             placeholder="A sentence about your health, routine, or questions you’d like to ask…"
-            className="rounded-xl border-input bg-cream/60 px-4 py-3 text-sm focus-visible:ring-botanical"
+            className="rounded-xl border-input bg-cream/60 px-4 py-3 text-base focus-visible:ring-botanical"
           />
         </div>
       </div>

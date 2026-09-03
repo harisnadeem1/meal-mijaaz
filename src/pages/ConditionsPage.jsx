@@ -12,15 +12,15 @@ const ConditionsPage = () => (
     <Helmet>
       <title>Conditions I Support — Meal Mizaaj</title>
       <meta
-        name="description"
-        content="Nutrition support for weight concerns, prediabetes and type 2 diabetes, hypertension, cholesterol, fatty liver, PCOS, digestive concerns, nutrient adequacy, pregnancy and postpartum, sports nutrition, vegetarian nutrition, and general wellness — always alongside your doctor."
-      />
+  name="description"
+  content="Personalised nutrition support for healthy weight management, prediabetes and type 2 diabetes, high blood pressure, cholesterol, fatty liver, PCOS, digestive concerns, pregnancy, nutrient adequacy, active lifestyles, plant-forward eating, and general wellness."
+/>
     </Helmet>
 
     <PageHero
       eyebrow="Conditions I support"
       title="Nutrition support for the health concerns real people face"
-      lead="Calm, practical nutrition guidance for everyday conditions — adapted to Pakistani plates, and always designed to work alongside your doctor and healthcare team."
+      lead="Calm, practical nutrition guidance for everyday health goals and nutrition-related concerns — shaped around your routine, familiar foods, and wider healthcare support."
     />
 
     {/* Conditions grid */}

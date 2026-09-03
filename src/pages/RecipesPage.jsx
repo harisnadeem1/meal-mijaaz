@@ -26,7 +26,8 @@ const CATEGORIES = [
   'PCOS-Friendly',
   'Digestive Health',
   'Quick Meals',
-  'Pakistani Food Swaps',
+  'Everyday Food Swaps',
+  'Vegetarian & Plant-Forward',
 ];
 
 const RecipeCard = ({ recipe, index }) => (
@@ -146,75 +147,75 @@ const RecipeCard = ({ recipe, index }) => (
   </Reveal>
 );
 
-const SignupBlock = () => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle');
+// const SignupBlock = () => {
+//   const [email, setEmail] = useState('');
+//   const [status, setStatus] = useState('idle');
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      toast.error('Please enter a valid email address.');
-      return;
-    }
-    setStatus('sent');
-    toast.success('You’re on the list — thank you!');
-  };
+//   const onSubmit = (e) => {
+//     e.preventDefault();
+//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+//       toast.error('Please enter a valid email address.');
+//       return;
+//     }
+//     setStatus('sent');
+//     toast.success('You’re on the list — thank you!');
+//   };
 
-  if (status === 'sent') {
-    return (
-      <div className="mx-auto max-w-2xl rounded-3xl border border-botanical/25 bg-sage/40 px-6 py-12 text-center md:py-14">
-        <h2 className="font-serif text-2xl font-medium text-primary md:text-3xl">
-          You’re on the list
-        </h2>
-        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Simple nutrition notes, recipes, and practical tips will land in your inbox. You can
-          unsubscribe anytime.
-        </p>
-      </div>
-    );
-  }
+//   if (status === 'sent') {
+//     return (
+//       <div className="mx-auto max-w-2xl rounded-3xl border border-botanical/25 bg-sage/40 px-6 py-12 text-center md:py-14">
+//         <h2 className="font-serif text-2xl font-medium text-primary md:text-3xl">
+//           You’re on the list
+//         </h2>
+//         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+//           Simple nutrition notes, recipes, and practical tips will land in your inbox. You can
+//           unsubscribe anytime.
+//         </p>
+//       </div>
+//     );
+//   }
 
-  return (
-    <div className="mx-auto max-w-2xl rounded-3xl border border-botanical/25 bg-primary px-6 py-12 text-center text-primary-foreground md:py-14">
-      <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-foreground/15 text-gold">
-        <Mail className="h-5 w-5" strokeWidth={1.7} />
-      </span>
-      <h2 className="mt-5 font-serif text-2xl font-medium md:text-3xl">
-        Simple nutrition notes, recipes, and practical tips.
-      </h2>
-      <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-primary-foreground/75">
-        Join the Meal Mizaaj newsletter for the occasional, no-spam email — a recipe, a swap, or a
-        small idea worth trying this week.
-      </p>
-      <form
-        onSubmit={onSubmit}
-        className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row"
-      >
-        <Input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          autoComplete="email"
-          className="h-12 rounded-full border-primary-foreground/20 bg-primary-foreground/10 px-5 text-sm text-primary-foreground placeholder:text-primary-foreground/55 focus-visible:ring-gold"
-        />
-        <Button
-          type="submit"
-          className="h-12 shrink-0 rounded-full bg-primary-foreground px-7 text-sm font-semibold text-primary transition-all hover:bg-cream active:scale-[0.98]"
-        >
-          Subscribe
-        </Button>
-      </form>
-      <p className="mt-4 text-xs text-primary-foreground/55">
-        No spam. Unsubscribe anytime. See the{' '}
-        <Link to="/privacy" className="underline underline-offset-2 hover:text-gold">
-          Privacy Policy
-        </Link>
-        .
-      </p>
-    </div>
-  );
-};
+//   return (
+//     <div className="mx-auto max-w-2xl rounded-3xl border border-botanical/25 bg-primary px-6 py-12 text-center text-primary-foreground md:py-14">
+//       <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-foreground/15 text-gold">
+//         <Mail className="h-5 w-5" strokeWidth={1.7} />
+//       </span>
+//       <h2 className="mt-5 font-serif text-2xl font-medium md:text-3xl">
+//         Simple nutrition notes, recipes, and practical tips.
+//       </h2>
+//       <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-primary-foreground/75">
+//         Join the Meal Mizaaj newsletter for the occasional, no-spam email — a recipe, a swap, or a
+//         small idea worth trying this week.
+//       </p>
+//       <form
+//         onSubmit={onSubmit}
+//         className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row"
+//       >
+//         <Input
+//           type="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           placeholder="you@example.com"
+//           autoComplete="email"
+//           className="h-12 rounded-full border-primary-foreground/20 bg-primary-foreground/10 px-5 text-sm text-primary-foreground placeholder:text-primary-foreground/55 focus-visible:ring-gold"
+//         />
+//         <Button
+//           type="submit"
+//           className="h-12 shrink-0 rounded-full bg-primary-foreground px-7 text-sm font-semibold text-primary transition-all hover:bg-cream active:scale-[0.98]"
+//         >
+//           Subscribe
+//         </Button>
+//       </form>
+//       <p className="mt-4 text-xs text-primary-foreground/55">
+//         No spam. Unsubscribe anytime. See the{' '}
+//         <Link to="/privacy" className="underline underline-offset-2 hover:text-gold">
+//           Privacy Policy
+//         </Link>
+//         .
+//       </p>
+//     </div>
+//   );
+// };
 
 const RecipesPage = () => {
   const [active, setActive] = useState('All');
@@ -274,9 +275,62 @@ const RecipesPage = () => {
       </section>
 
       {/* Email signup */}
-      <section className="mx-auto max-w-7xl px-5 pb-16 md:px-8 md:pb-24">
+      {/* <section className="mx-auto max-w-7xl px-5 pb-16 md:px-8 md:pb-24">
         <SignupBlock />
-      </section>
+      </section> */}
+
+      {/* Consultation CTA */}
+<section className="mx-auto max-w-7xl px-5 py-4 pb-16 md:px-8 md:pb-24">
+  <Reveal>
+    <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-12 text-center text-primary-foreground md:px-12 md:py-16">
+      <div
+        aria-hidden="true"
+        className="absolute -left-16 -top-20 h-56 w-56 rounded-full bg-botanical/40 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-24 -right-16 h-64 w-64 rounded-full bg-gold/15 blur-3xl"
+      />
+
+      <div className="relative">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+          Beyond the recipe
+        </p>
+
+        <h2 className="mx-auto mt-4 max-w-2xl font-serif text-3xl font-medium leading-tight text-balance md:text-4xl">
+          Need guidance shaped around your own life?
+        </h2>
+
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/80 md:text-base">
+          Recipes are a useful place to begin. A one-to-one consultation gives you personalised
+          guidance shaped around your health goals, food preferences, routine, and the meals you
+          already enjoy.
+        </p>
+
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link
+            to="/book"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-cream px-8 text-sm font-semibold text-primary transition-all hover:bg-white active:scale-[0.98]"
+          >
+            Book a Free Call
+            <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+          </Link>
+
+          <Link
+            to="/services"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-primary-foreground/30 px-8 text-sm font-semibold text-primary-foreground transition-all hover:border-primary-foreground/60 active:scale-[0.98]"
+          >
+            Explore Services
+          </Link>
+        </div>
+
+        <p className="mt-5 text-xs text-primary-foreground/60">
+          Free 15-minute discovery call · No obligation
+        </p>
+      </div>
+    </div>
+  </Reveal>
+</section>
 
       {/* Resources */}
       <section className="border-t border-border/60 bg-sage/30">

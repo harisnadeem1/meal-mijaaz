@@ -22,6 +22,10 @@ import {
   TrendingDown,
   TrendingUp,
   Users,
+  Utensils,
+  Bone,
+  Salad,
+  CircleDot ,
 } from 'lucide-react';
 
 export const IMAGES = {
@@ -36,7 +40,7 @@ export const CONTACT = {
   phone: '+92 300 123 4567',
   whatsapp: '+92 300 123 4567',
   instagram: '@mealmizaaj',
-  instagramUrl: 'https://instagram.com',
+  instagramUrl: 'https://instagram.com/mealmizaaj',
   location: 'Lahore, Pakistan',
   onlineAvailability: 'Online consultations worldwide · In-person in Lahore',
   hours: 'Monday – Saturday, 10:00 – 19:00 (PKT)',
@@ -57,131 +61,131 @@ export const SERVICES = [
   {
     icon: ClipboardList,
     title: 'Initial Nutrition Consultation',
-    tagline: 'Where every plan begins.',
+    tagline: 'Where your personalised support begins.',
     description:
-      'A 60-minute one-to-one online session where we look at your full picture — medical history, recent lab reports, lifestyle, sleep, stress, and the way your household actually eats. You leave with clear, prioritised next steps, not a lecture.',
+      'A one-to-one online session to understand your health goals, food habits, lifestyle, sleep, stress, and the meals that shape your everyday routine. Where relevant, we can also discuss recent medical reports to inform your nutrition guidance. You leave with clear, practical next steps — not a lecture.',
     includes: [
-      'Full dietary & lifestyle assessment',
-      'Review of recent lab reports',
+      'Detailed food, lifestyle, and health-goal assessment',
+      'Discussion of relevant recent medical reports',
       'Realistic goal setting, together',
-      'Written summary after the session',
+      'Clear written next steps after the session',
     ],
   },
   {
     icon: NotebookPen,
-    title: 'Personalised Meal Plan',
+    title: 'Personalised Nutrition Plan',
     tagline: 'Built around your kitchen, not a textbook.',
     description:
-      'A 7–14 day meal plan tailored to your condition, preferences, and routine — written around the food your home already cooks. Roti, daal, sabzi, and chai all have a place.',
+      'A practical nutrition plan shaped around your health needs, food preferences, schedule, cooking habits, and the meals you already enjoy at home. Depending on what will help you most, this may include a structured 7–14 day meal plan, flexible meal-building guidance, or practical food swaps.',
     includes: [
-      'Condition-specific 7–14 day plan',
-      'Desi swaps for every meal',
-      'Portion guidance without weighing scales',
-      'Pantry & grocery list',
+      'Tailored meal structure or 7–14 day plan where appropriate',
+      'Culturally familiar food swaps and meal ideas',
+      'Simple portion guidance without weighing scales',
+      'Pantry and grocery guidance',
     ],
   },
   {
     icon: TrendingDown,
-    title: 'Weight Loss Support',
-    tagline: 'Sustainable fat loss, no crash diets.',
+    title: 'Healthy Weight Management',
+    tagline: 'Sustainable habits, not crash diets.',
     description:
-      'Steady, sustainable fat loss built on the food your household already cooks — at a pace your body can keep, with habits that survive weddings, travel, and Ramzan.',
+      'Practical nutrition support for healthy weight loss, weight maintenance, or rebuilding a more balanced routine with food. We focus on meals and habits that can work through busy weeks, travel, celebrations, and everyday life — without restrictive rules or all-or-nothing thinking.',
     includes: [
-      'Calorie & protein awareness, simply explained',
-      'Meal timing & portion strategy',
-      'Weekly accountability check-ins',
-      'Dawat & eating-out guidance',
+      'Simple calorie and protein awareness',
+      'Portion, meal-timing, and hunger-management strategies',
+      'Flexible guidance for eating out and social occasions',
+      'Regular progress review and practical habit support',
     ],
   },
   {
     icon: TrendingUp,
     title: 'Healthy Weight Gain Support',
-    tagline: 'Strength and energy first.',
+    tagline: 'Nourishment, strength, and energy first.',
     description:
-      'Structured, nutrient-dense gain for those who struggle to put on weight — building strength and energy rather than empty calories.',
+      'Structured nutrition guidance for people who find it difficult to gain weight, maintain their appetite, or meet their energy needs. The focus is on balanced, nutrient-dense meals that support everyday energy and strength — not simply adding empty calories.',
     includes: [
-      'Calorie-dense, balanced meal structure',
-      'Protein & strength-friendly guidance',
-      'Appetite & digestion support',
-      'Progress tracking',
+      'Balanced, calorie-dense meal structure',
+      'Protein-focused food guidance',
+      'Practical ideas for low appetite and meal consistency',
+      'Progress review and plan adjustments',
     ],
   },
   {
     icon: Droplets,
     title: 'Diabetes Nutrition Support',
-    tagline: 'Steadier blood sugar, desi-style.',
+    tagline: 'Practical food guidance for steadier routines.',
     description:
-      'Carbohydrate awareness, meal timing, and desi-friendly swaps that help steady blood sugar — always alongside your doctor’s care.',
+      'Personalised nutrition guidance to help you build balanced meals, understand carbohydrate portions, and create meal routines that support blood-glucose management. Your nutrition care is designed to work alongside your physician’s treatment plan and prescribed medication.',
     includes: [
-      'Carb awareness & glycaemic pairing',
-      'Meal timing for stable glucose',
-      'Desi swaps for roti, rice & sweets',
-      'Coordination with your medical team',
+      'Clear carbohydrate and portion guidance',
+      'Meal timing and balanced meal-building strategies',
+      'Practical swaps for everyday meals, rice, breads, and sweets',
+      'Nutrition support aligned with your wider healthcare team',
     ],
   },
   {
     icon: HeartPulse,
     title: 'Hypertension & Heart Health Support',
-    tagline: 'Salt-smart, heart-friendly cooking.',
+    tagline: 'Heart-friendly meals without losing flavour.',
     description:
-      'Salt-smart cooking, heart-friendly fats, and DASH-inspired patterns adapted to Pakistani plates — flavour kept, sodium gently lowered.',
+      'Practical nutrition guidance for high blood pressure, cholesterol concerns, and heart-health goals. We work on salt awareness, fibre-rich foods, balanced fats, and realistic cooking changes that fit the meals you and your family already enjoy.',
     includes: [
-      'Low-sodium cooking techniques',
-      'Heart-friendly fat guidance',
-      'Potassium-rich food pairing',
-      'Lifestyle & movement basics',
+      'Lower-sodium cooking and label-reading guidance',
+      'Heart-friendly fat and fibre recommendations',
+      'Food ideas that support balanced everyday meals',
+      'Lifestyle foundations, including movement and meal routines',
     ],
   },
   {
     icon: Stethoscope,
-    title: 'Medical Nutrition Guidance',
-    tagline: 'Nutrition that fits your diagnosis.',
+    title: 'PCOS, Digestive & Metabolic Support',
+    tagline: 'Nutrition guidance shaped around your needs.',
     description:
-      'Therapeutic nutrition for conditions such as high cholesterol, fatty liver, PCOS, and digestive concerns — designed around your reports and prescriptions, with your doctor’s care leading.',
+      'Personalised nutrition support for concerns such as PCOS, high cholesterol, fatty liver, digestive symptoms, and related metabolic health goals. Guidance is tailored to your symptoms, food preferences, routine, and relevant medical care.',
     includes: [
-      'Report-led nutrition planning',
-      'Condition-specific food guidance',
-      'Coordination with your healthcare team',
-      'Ongoing adjustments as reports change',
+      'Condition-focused nutrition assessment',
+      'Practical meal structure and food guidance',
+      'Support with symptom-aware eating patterns where appropriate',
+      'Plan updates as your needs, routine, or medical advice change',
     ],
   },
   {
     icon: CalendarCheck,
-    title: 'Follow-Up Consultations',
-    tagline: 'Steady support while habits take root.',
+    title: 'Follow-Up & Ongoing Support',
+    tagline: 'Steady guidance while new habits take root.',
     description:
-      'Scheduled check-ins that keep you accountable without pressure. We adjust your plan as your body, routine, and reports change — and troubleshoot the real-life weeks in between.',
+      'Follow-up sessions give you space to review progress, discuss what has felt difficult, and adjust your nutrition approach as your routine, goals, or health needs change. Support stays practical, flexible, and free from pressure.',
     includes: [
       '20–30 minute review sessions',
-      'Plan adjustments as you progress',
-      'WhatsApp support between visits',
-      'Habit & mindset coaching',
+      'Progress review and realistic goal updates',
+      'Personalised plan adjustments where needed',
+      'Practical habit and routine support',
     ],
   },
   {
     icon: ChefHat,
-    title: 'Healthy Recipes & Grocery Guidance',
-    tagline: 'The food you love, cooked a little wiser.',
+    title: 'Recipes & Grocery Guidance',
+    tagline: 'Food you enjoy, made more practical.',
     description:
-      'Learn to lighten family favourites — from daal and karahi to khichdi and chaat — without losing the taste that makes them worth cooking. Plus practical grocery lists that match your plan.',
+      'Learn how to adapt familiar meals with practical cooking methods, balanced portions, and simple ingredient swaps — without losing the comfort and flavour that make food enjoyable.',
     includes: [
-      'Recipe makeovers for family dishes',
-      'Cooking method & oil guidance',
-      'Smart tiffin & lunchbox ideas',
-      'Plan-matched grocery lists',
+      'Recipe adaptations for familiar home-cooked meals',
+      'Cooking-method and oil-use guidance',
+      'Lunchbox and meal-prep ideas',
+      'Grocery lists matched to your nutrition goals',
     ],
   },
   {
     icon: Users,
-    title: 'Family Nutrition Support',
-    tagline: 'One kitchen, everyone nourished.',
+    title: 'Family & Everyday Nutrition',
+    tagline: 'One kitchen, more ease around food.',
     description:
-      'Plans that fit the whole household — the children’s tiffins, a partner’s cholesterol, an elder’s blood pressure — so one kitchen feeds everyone well, without cooking separate meals.',
+      'Practical nutrition guidance designed to work across the household, so healthier meals do not mean cooking separate food for everyone. We focus on flexible family meal structure, shared grocery habits, and realistic routines that support everyday wellbeing.',
     includes: [
       'Whole-household meal structure',
-      'Age-appropriate portions & nutrients',
-      'Picky-eater & kid-friendly ideas',
-      'Shared grocery planning',
+      'Flexible portion guidance for family meals',
+      'Lunchbox, snack, and meal-prep ideas',
+      'Shared grocery and kitchen planning',
     ],
   },
 ];
@@ -190,113 +194,139 @@ export const PERSONAL_FACTORS = [
   {
     icon: ChefHat,
     title: 'Food preferences',
-    description: 'The flavours, textures, and dishes you genuinely enjoy — and the ones you’d rather avoid.',
+    description:
+      'The flavours, textures, meals, and ingredients you genuinely enjoy — plus the things you would rather avoid.',
   },
   {
     icon: Stethoscope,
-    title: 'Medical needs',
-    description: 'Your diagnoses, recent lab reports, and any medications, considered alongside your doctor’s care.',
+    title: 'Health needs',
+    description:
+      'Your health goals, relevant medical history, recent reports, and prescribed care — considered thoughtfully.',
   },
   {
     icon: CalendarCheck,
-    title: 'Routine',
-    description: 'Your working hours, sleep, movement, and the real shape of an ordinary day.',
+    title: 'Your routine',
+    description:
+      'Your work or study schedule, sleep, movement, cooking time, and the real rhythm of an ordinary day.',
   },
   {
     icon: NotebookPen,
-    title: 'Budget',
-    description: 'Practical, affordable ingredients — healthy eating that fits what you actually spend.',
+    title: 'Your budget',
+    description:
+      'Practical ingredient choices and meal ideas that feel realistic for your everyday grocery spending.',
   },
   {
     icon: Flower2,
-    title: 'Culture',
-    description: 'Desi home cooking, regional traditions, and the food your family has always eaten.',
+    title: 'Food culture',
+    description:
+      'The home-cooked meals, traditions, and familiar foods that make eating feel comfortable and sustainable.',
   },
   {
     icon: Users,
-    title: 'Family meals',
-    description: 'One plan that feeds the whole household — no separate cooking for one person.',
+    title: 'Household meals',
+    description:
+      'Guidance that works around shared meals, family routines, and one kitchen — without separate cooking.',
   },
   {
     icon: Activity,
-    title: 'Goals',
-    description: 'What you want to feel, change, or sustain — at a pace that is realistic for you.',
+    title: 'Your goals',
+    description:
+      'What you would like to feel, improve, manage, or maintain — at a pace that is realistic for you.',
   },
 ];
 
 export const CONDITIONS = [
   {
     icon: Scale,
-    name: 'Weight Concerns',
+    name: 'Healthy Weight Management',
     blurb:
-      'Support for both healthy weight loss and healthy weight gain — built on real food, at a pace your body can sustain.',
+      'Practical support for healthy weight loss, weight gain, or weight maintenance — built around realistic meals, sustainable habits, and your everyday routine.',
   },
   {
     icon: Droplets,
     name: 'Prediabetes & Type 2 Diabetes',
     blurb:
-      'Carbohydrate awareness, meal timing, and desi-friendly swaps that help steady blood sugar alongside your doctor’s care.',
+      'Personalised guidance for balanced meals, carbohydrate portions, meal timing, and everyday food choices that support blood-glucose management alongside your physician’s care.',
   },
   {
     icon: HeartPulse,
-    name: 'Hypertension',
+    name: 'High Blood Pressure & Heart Health',
     blurb:
-      'Salt-smart cooking and heart-friendly patterns adapted to Pakistani plates — flavour kept, sodium gently lowered.',
+      'Practical guidance for salt awareness, balanced fats, fibre-rich meals, and heart-friendly cooking that still fits the food you enjoy.',
   },
   {
     icon: Gauge,
     name: 'High Cholesterol',
     blurb:
-      'Fibre-forward plans and smarter cooking fats that support healthier lipid panels, report by report.',
+      'Food and lifestyle guidance focused on fibre, balanced fats, everyday meal structure, and changes that support your wider heart-health goals.',
   },
   {
     icon: ShieldCheck,
     name: 'Fatty Liver',
     blurb:
-      'Weight-conscious, low-sugar nutrition patterns that ease the load on your liver and support gradual improvement.',
+      'Support with balanced eating patterns, gradual lifestyle changes, and nutrition habits that can complement your physician-led care.',
   },
   {
     icon: Flower2,
-    name: 'PCOS',
+    name: 'PCOS Support',
     blurb:
-      'Gentle, consistent nutrition that supports hormone balance, cycle regularity, skin, and sustainable weight management.',
+      'Compassionate nutrition guidance for PCOS, including balanced meals, regular eating patterns, weight-management support where appropriate, and practical food routines.',
+  },
+  {
+    icon: CircleDot ,
+    name: 'Thyroid & Hormonal Health',
+    blurb:
+      'Practical nutrition support for people managing thyroid-related concerns and hormone-health goals, designed to complement your physician-led care.',
   },
   {
     icon: Leaf,
     name: 'Digestive Concerns',
     blurb:
-      'Calm-meal guidance for reflux, constipation, bloating, and IBS tendencies — eating patterns that are kinder to your gut.',
+      'Practical food guidance for concerns such as bloating, constipation, reflux, and IBS-type symptoms, shaped around your symptoms and medical advice.',
+  },
+  {
+    icon: Utensils,
+    name: 'Low Appetite & Unintentional Weight Loss',
+    blurb:
+      'Nutrition support for low appetite, reduced food intake, or unintended weight changes, with practical ideas for meeting energy and protein needs.',
   },
   {
     icon: Apple,
     name: 'Nutrient Adequacy',
     blurb:
-      'For low iron, B12, vitamin D, or general gaps — practical ways to meet your needs from everyday desi food.',
+      'Everyday nutrition support for concerns about iron, vitamin B12, vitamin D, protein, fibre, or overall nutrient intake, with relevant medical care considered.',
+  },
+  {
+    icon: Bone,
+    name: 'Bone Health',
+    blurb:
+      'Guidance for building everyday eating habits that support calcium, vitamin D, protein, and overall bone health alongside appropriate medical care.',
   },
   {
     icon: Baby,
-    name: 'Pregnancy & Postpartum',
+    name: 'Pregnancy & Postpartum Nutrition',
     blurb:
-      'Trimester-by-trimester nourishment for mother and baby, plus gentle postpartum recovery and lactation support.',
+      'Support for balanced eating, changing nutrition needs, practical meal ideas, and postpartum nourishment — designed to complement your antenatal or postnatal medical care.',
   },
   {
     icon: Dumbbell,
-    name: 'Sports & Muscle Gain',
+    name: 'Active Lifestyle & Muscle Support',
     blurb:
-      'Protein timing, recovery meals, and balanced fuel for training — for active people building strength and endurance.',
+      'Balanced nutrition guidance for active adults who want support with training fuel, protein intake, recovery meals, energy, and strength-focused goals.',
   },
   {
     icon: Sprout,
-    name: 'Vegetarian Nutrition',
+    name: 'Vegetarian & Plant-Forward Nutrition',
     blurb:
-      'Complete, balanced vegetarian and vegan eating — meeting protein, iron, and B12 needs without monotony.',
+      'Practical support for balanced vegetarian or plant-forward eating, with attention to protein, iron, vitamin B12, calcium, and meal variety.',
   },
   {
     icon: Sparkles,
     name: 'General Wellness',
     blurb:
-      'For anyone who simply wants to feel better — steadier energy, better sleep, and a calmer relationship with food.',
+      'For anyone who wants a calmer, more balanced approach to food, energy, sleep, meal routines, and everyday wellbeing.',
   },
+  
 ];
 
 export const PACKAGES = [
@@ -390,80 +420,237 @@ export const PACKAGES = [
 // Comparison matrix — rows are features, values per package (true / false / string)
 export const PACKAGE_COMPARISON = [
   {
-    feature: 'One-to-one online consultation',
-    values: ['45 min', 'Included', 'Detailed', 'Detailed', '2 per month'],
+    feature: 'Best suited for',
+    values: [
+      'Clear first-step guidance',
+      'A structured meal routine',
+      'Healthy weight-management support',
+      'Condition-focused nutrition support',
+      'Closer ongoing accountability',
+    ],
   },
   {
-    feature: 'Customised 7-day meal plan',
+    feature: 'Initial nutrition consultation',
+    values: [
+      '45–60 minutes',
+      'Included',
+      'Included',
+      'Included',
+      'Included',
+    ],
+  },
+  {
+    feature: 'Personalised nutrition plan',
+    values: [
+      'Clear written next steps',
+      'Tailored meal structure',
+      'Tailored meal structure',
+      'Condition-focused meal structure',
+      'Tailored plan with regular refinement',
+    ],
+  },
+  {
+    feature: 'Portion and meal-timing guidance',
+    values: [true, true, true, true, true],
+  },
+  {
+    feature: 'Food swaps and practical meal ideas',
     values: [false, true, true, true, true],
   },
   {
-    feature: 'Portion & meal-timing guidance',
-    values: [false, true, true, true, true],
+    feature: 'Grocery and pantry guidance',
+    values: [false, true, 'As needed', 'As needed', true],
   },
   {
-    feature: 'Food swaps & recipe ideas',
-    values: [false, true, true, true, true],
-  },
-  {
-    feature: 'Grocery guidance',
-    values: [false, true, false, false, true],
-  },
-  {
-    feature: 'Weekly progress check-ins',
-    values: [false, false, true, false, true],
+    feature: 'Progress review',
+    values: [
+      'Included in session',
+      'One plan refinement',
+      'Regular check-ins',
+      'Scheduled reviews',
+      'Weekly check-ins',
+    ],
   },
   {
     feature: 'Plan adjustments',
-    values: [false, '1 minor', '1 / month', true, 'Regular'],
+    values: [
+      'Not included',
+      'One refinement',
+      'As progress changes',
+      'As health needs change',
+      'Regular refinement',
+    ],
   },
   {
     feature: 'Follow-up consultations',
-    values: [false, false, false, '2 / month', true],
+    values: [
+      false,
+      'Optional',
+      'Based on your support plan',
+      'Scheduled as needed',
+      'More frequent support',
+    ],
   },
   {
-    feature: 'Habit tracking',
-    values: [false, false, false, false, true],
-  },
-  {
-    feature: 'Priority support',
-    values: [false, false, false, false, true],
+    feature: 'Between-session messaging',
+    values: [
+      false,
+      false,
+      'Selected plans',
+      'Selected plans',
+      'Priority support',
+    ],
   },
 ];
 
 export const PACKAGE_FAQS = [
   {
-    q: 'Are plans customised for Pakistani foods?',
-    a: 'Yes. Every plan is built around the food your home already cooks — roti, daal, sabzi, rice, and chai all have a place. We adjust portions, timing, cooking methods, and pairings rather than asking you to eat unfamiliar meals.',
+    q: 'How do I know which support option is right for me?',
+    a: 'You do not need to decide before getting in touch. During your free 15-minute discovery call, we will talk through your goals, routine, health concerns, and the level of guidance you are looking for before recommending a suitable next step.',
+  },
+  {
+    q: 'How are fees shared?',
+    a: 'Fees are shared clearly after we understand the type of support you need and before any paid consultation or support plan is confirmed. There is no obligation to continue after your free discovery call.',
   },
   {
     q: 'Can I book an online consultation?',
-    a: 'Absolutely. All consultations are held online over Google Meet or WhatsApp video, so you can join from anywhere in Pakistan or abroad. You receive your plan and notes in writing after each session.',
+    a: 'Yes. All consultations are held online through Google Meet or WhatsApp video, so you can join from home or wherever is comfortable for you. Any relevant notes, guidance, or nutrition plan will be shared with you in writing after your session.',
   },
   {
-    q: 'Can I choose a plan after the free call?',
-    a: 'Yes. The free discovery call is a no-pressure conversation to understand your goals and recommend the right package. You are welcome to choose a plan during or after the call — never before you are ready.',
+    q: 'Are nutrition plans customised?',
+    a: 'Yes. Your guidance is shaped around your health goals, food preferences, routine, budget, cooking habits, and the meals you already enjoy. Rather than asking you to follow unfamiliar foods or strict rules, we focus on practical portions, meal structure, cooking methods, and realistic food swaps.',
   },
   {
-    q: 'Are follow-ups included?',
-    a: 'It depends on the package. The Initial Consultation and Personalised Meal Plan are one-time, while the monthly programs include scheduled follow-ups — two per month for Diabetes & Hypertension Care, and weekly check-ins for Weight Management and Premium Transformation.',
+    q: 'Do I need a detailed meal plan?',
+    a: 'Not always. Some people benefit most from clear nutrition education, practical food swaps, portion guidance, and a flexible meal structure. Others prefer a written meal plan. We will decide together what level of structure will be most useful for you.',
   },
   {
-    q: 'Can you help with diabetes or hypertension?',
-    a: 'Yes. The Diabetes & Hypertension Nutrition Care package is designed for these concerns, including cholesterol and fatty liver. Nutrition counselling supports your overall care — medication and medical treatment decisions always remain with your physician.',
+    q: 'Are follow-up sessions included?',
+    a: 'Follow-up support depends on the option recommended for you. A one-time consultation gives you clear starting guidance, while ongoing support may include scheduled review sessions, progress check-ins, and adjustments as your needs, routine, or health goals change.',
   },
   {
-    q: 'Do you offer refunds or rescheduling?',
-    a: 'Sessions can be rescheduled with at least 24 hours’ notice. Monthly programs can be paused for up to two weeks for travel, illness, or family commitments. Because each plan is personally prepared, one-time consultations are non-refundable once the written plan has been delivered.',
+    q: 'Can you support diabetes, hypertension, or other health concerns?',
+    a: 'Meal Mizaaj provides nutrition guidance for concerns such as diabetes, hypertension, cholesterol, fatty liver, PCOS, digestive health, and healthy weight management. Nutrition support works alongside — not instead of — your physician’s diagnosis, medication, and medical treatment plan.',
+  },
+  {
+    q: 'Can I reschedule a session?',
+    a: 'Yes. If you need to reschedule, please give at least 24 hours’ notice where possible. Rescheduling details for ongoing support will be explained clearly before your plan begins.',
+  },
+  {
+    q: 'Can I receive support between consultations?',
+    a: 'Between-session messaging may be available with selected ongoing support options. This is intended for practical nutrition questions and plan clarification during working hours; it is not an emergency or medical-care service.',
   },
 ];
 
 export const RECIPES = [
   {
+  slug: 'lighter-chicken-karahi',
+  title: 'Lighter Chicken Karahi',
+  image:
+    'https://stewwithsaba.com/wp-content/uploads/2023/04/IMG_9109-scaled.jpg',
+  tags: ['High Protein', 'Heart Health', 'Everyday Food Swaps'],
+  time: '40 min',
+  servings: '4 servings',
+  calories: '~290 kcal per serving',
+  intro:
+    'A home-style chicken karahi made with a tomato-forward masala, measured oil, and plenty of fresh ginger, coriander, and green chilli.',
+  ingredients: [
+    '500 g skinless chicken pieces',
+    '4 medium tomatoes, finely chopped or blended',
+    '1 medium onion, finely sliced',
+    '1 tbsp neutral cooking oil',
+    '1 tbsp ginger-garlic paste',
+    '1 tsp cumin seeds',
+    '1 tsp coriander powder',
+    '½ tsp turmeric',
+    '½–1 tsp red chilli powder, to taste',
+    'Fresh ginger, coriander, green chilli, and lemon to finish',
+  ],
+  steps: [
+    'Warm the oil in a wide pan and cook the onion until soft and lightly golden.',
+    'Add cumin, ginger-garlic paste, coriander powder, turmeric, and chilli powder. Stir for 30 seconds.',
+    'Add chicken and cook for 5–6 minutes, turning until lightly sealed.',
+    'Add tomatoes, cover, and cook on a low heat for 20–25 minutes until the chicken is cooked and the masala thickens.',
+    'Finish with fresh ginger, coriander, green chilli, and a squeeze of lemon. Serve with salad and one whole-wheat roti or a measured portion of rice.',
+  ],
+  note:
+    'The flavour comes from tomatoes, ginger, spices, and fresh herbs—not excess oil. Pair it with vegetables and a sensible carbohydrate portion for a balanced meal.',
+},
+{
+  slug: 'vegetable-chickpea-biryani',
+  title: 'Vegetable & Chickpea Biryani',
+  image:
+    'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/e8b29cd1-fca1-5fa6-a434-395b48a7bf7f/94a1369c-4616-513d-a726-fc969c75a839.jpg',
+  tags: ['High Protein', 'Diabetes-Friendly', 'Heart Health', 'Everyday Food Swaps'],
+  time: '45 min',
+  servings: '4 servings',
+  calories: '~360 kcal per serving',
+  intro:
+    'A colourful one-pot biryani with chickpeas, vegetables, fragrant spices, and enough protein and fibre to make it a satisfying everyday meal.',
+  ingredients: [
+    '1 cup basmati rice, rinsed and soaked for 20 minutes',
+    '1½ cups cooked chickpeas, rinsed and drained',
+    '1 small onion, thinly sliced',
+    '1 tomato, chopped',
+    '1 carrot, diced',
+    '1 cup mixed vegetables, such as peas, beans, or cauliflower',
+    '1 tbsp neutral cooking oil',
+    '½ cup plain yogurt',
+    '1 tsp ginger-garlic paste',
+    '1 tsp cumin seeds',
+    '1 tsp biryani masala or mild curry powder',
+    '½ tsp turmeric',
+    'Fresh mint, coriander, lemon, and cucumber raita to serve',
+  ],
+  steps: [
+    'Cook the soaked rice until just tender, then drain and set aside.',
+    'Warm oil in a deep pan. Cook onion until lightly golden, then add cumin and ginger-garlic paste.',
+    'Add tomato, spices, carrot, and mixed vegetables. Cook until the vegetables begin to soften.',
+    'Stir in chickpeas and yogurt, then cook for 3–4 minutes until coated in the masala.',
+    'Layer rice over the chickpea mixture, cover tightly, and steam on low heat for 10 minutes.',
+    'Finish with mint, coriander, lemon, and cucumber raita.',
+  ],
+  note:
+    'Chickpeas add fibre and plant protein, making this more filling than a rice-only biryani. If you are managing blood glucose, keep the rice portion moderate and add extra salad or raita.',
+},
+{
+  slug: 'spiced-chickpea-yogurt-breakfast-bowl',
+  title: 'Spiced Chickpea Yogurt Breakfast Bowl',
+  image:
+    'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/23d16786-9e6e-5802-a2e6-5821b87dbf1c/830c736e-a36a-5301-8e04-5ac2fcfeb082.jpg',
+  tags: ['High Protein', 'PCOS-Friendly', 'Quick Meals', 'Vegetarian & Plant-Forward'],
+  time: '10 min',
+  servings: '1 serving',
+  calories: '~330 kcal per serving',
+  intro:
+    'Creamy yogurt, warmly spiced chickpeas, fresh vegetables, and herbs make a quick breakfast or light lunch that keeps you satisfied.',
+  ingredients: [
+    '¾ cup cooked chickpeas, rinsed and drained',
+    '¾ cup plain Greek yogurt or thick plain yogurt',
+    '½ small cucumber, diced',
+    '1 small tomato, diced',
+    '½ tsp roasted cumin',
+    '¼ tsp paprika or mild chilli powder',
+    'Pinch of black pepper and salt',
+    '1 tsp olive oil or neutral oil',
+    'Fresh mint or coriander',
+    'Lemon juice to taste',
+    'Optional: 1 small whole-wheat pita or roti on the side',
+  ],
+  steps: [
+    'Warm the oil in a small pan and toss the chickpeas with roasted cumin, paprika, black pepper, and a pinch of salt for 2–3 minutes.',
+    'Spoon yogurt into a bowl and top with cucumber, tomato, and warm chickpeas.',
+    'Finish with mint or coriander and lemon juice.',
+    'Serve as it is or with one small whole-wheat pita or roti if you need a more substantial meal.',
+  ],
+  note:
+    'For a more filling breakfast, choose Greek yogurt or strained yogurt for extra protein. Adjust the bread portion to your appetite, activity level, and nutrition goals.',
+},
+  {
     slug: 'masoor-daal-lightened-up',
     title: 'Masoor Daal, Lightened Up',
     image: 'https://images.hostinger.com/ebecdc3b-fb46-43f7-89aa-97c194337929.png',
-    tags: ['High Protein', 'Heart Health', 'Pakistani Food Swaps'],
+    tags: ['High Protein', 'Heart Health', 'Everyday Food Swaps'],
     time: '30 min',
     servings: '4 servings',
     calories: '~210 kcal',
@@ -517,7 +704,7 @@ export const RECIPES = [
   {
     slug: 'tandoori-chicken-salad-plate',
     title: 'Tandoori Chicken Salad Plate',
-    image: 'https://images.hostinger.com/4de77013-19bd-4255-b302-0e1cc773cc82.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv-Fb2nAiXVgZ_LmXNQZat4YAS_PrY89dTrIERkHTMGn98iOeEpYsRPWFQ&s=10',
     tags: ['High Protein', 'Weight Management', 'Quick Meals'],
     time: '35 min',
     servings: '2 servings',
@@ -542,7 +729,7 @@ export const RECIPES = [
   {
     slug: 'cardamom-overnight-oats',
     title: 'Cardamom Overnight Oats',
-    image: 'https://images.hostinger.com/4a0361c4-7e4f-4b22-80ea-e2966da823af.png',
+    image: 'https://files.cleanfooddirtygirl.com/20230512151608/cardamom-vanilla-overnight-oats-recipe.jpg',
     tags: ['Heart Health', 'Quick Meals'],
     time: '5 min + overnight',
     servings: '1 serving',
@@ -564,37 +751,45 @@ export const RECIPES = [
     ],
     note: 'Oats are a source of beta-glucan fibre — a small, simple breakfast habit worth building into your mornings.',
   },
-  {
-    slug: 'lauki-sabzi-whole-wheat-roti',
-    title: 'Lauki Sabzi with Whole Wheat Roti',
-    image: 'https://images.hostinger.com/5f9c8ec7-de2c-4df4-ad00-f1f131e3e7618.png',
-    tags: ['Digestive Health', 'Weight Management', 'Pakistani Food Swaps'],
-    time: '25 min',
-    servings: '3 servings',
-    calories: '~180 kcal',
-    intro:
-      'The most underrated vegetable in the desi kitchen — hydrating, gentle on the gut, and quietly delicious.',
-    ingredients: [
-      '1 medium lauki (bottle gourd), peeled & cubed',
-      '1 onion & 2 tomatoes, chopped',
-      '1 tsp cumin seeds',
-      '½ tsp turmeric, ½ tsp coriander powder',
-      '1 tbsp oil',
-      'Fresh coriander to finish',
-    ],
-    steps: [
-      'Warm oil, bloom cumin, and soften the onion until translucent.',
-      'Add tomatoes and spices; cook until the masala comes together.',
-      'Add lauki with a splash of water; cover and simmer 12–15 minutes.',
-      'Finish with coriander and serve with whole wheat roti and cucumber raita.',
-    ],
-    note: 'A go-to light dinner that fits digestive-health and weight-management plans — easy to cook, easy to digest.',
-  },
+{
+  slug: 'bhindi-masala-home-style',
+  title: 'Home-Style Bhindi Masala',
+  image:
+    'https://myfoodstory.com/wp-content/uploads/2025/03/Bhindi-Masala-2.jpg',
+  tags: ['Heart Health', 'Weight Management', 'Everyday Food Swaps'],
+  time: '30 min',
+  servings: '3 servings',
+  calories: '~170 kcal per serving',
+  intro:
+    'A simple, flavourful bhindi masala with tomatoes, onions, warming spices, and just enough oil to keep every bite satisfying.',
+  ingredients: [
+    '500 g bhindi (okra), washed, dried well, and sliced',
+    '1 medium onion, thinly sliced',
+    '2 medium tomatoes, chopped',
+    '1 tbsp neutral cooking oil',
+    '1 tsp cumin seeds',
+    '½ tsp turmeric',
+    '1 tsp coriander powder',
+    '½ tsp red chilli powder, or to taste',
+    '½ tsp amchur or a squeeze of lemon',
+    'Fresh coriander to finish',
+  ],
+  steps: [
+    'Wash the bhindi, dry it thoroughly, trim the ends, and slice it into medium pieces.',
+    'Warm half the oil in a wide pan and cook the bhindi over medium heat for 8–10 minutes, stirring gently, until tender and less sticky. Set aside.',
+    'Add the remaining oil to the pan. Cook cumin and onion until the onion softens and turns lightly golden.',
+    'Add tomatoes, turmeric, coriander powder, and chilli powder. Cook until the tomatoes soften into a thick masala.',
+    'Return the bhindi to the pan, fold gently through the masala, and cook for another 3–4 minutes.',
+    'Finish with amchur or lemon and fresh coriander. Serve with whole-wheat roti, yogurt, and a fresh salad.',
+  ],
+  note:
+    'For a balanced plate, pair bhindi with a protein source such as daal, yogurt, chicken, fish, or beans, plus the carbohydrate portion that fits your own needs.',
+},
   {
     slug: 'quinoa-khichdi',
     title: 'Quinoa Khichdi',
     image: 'https://images.hostinger.com/10cd2666-da3a-4137-87af-d64b7f11e0e3.png',
-    tags: ['Diabetes-Friendly', 'Pakistani Food Swaps', 'Digestive Health'],
+    tags: ['Diabetes-Friendly', 'Everyday Food Swaps', 'Digestive Health'],
     time: '30 min',
     servings: '3 servings',
     calories: '~260 kcal',
@@ -621,94 +816,184 @@ export const RECIPES = [
 export const RESOURCES = [
   {
     icon: NotebookPen,
-    title: 'The 7-Day Starter Plate Guide',
+    title: 'The Balanced Plate Guide',
     description:
-      'How to build a balanced desi plate at any meal — the hand-portion method we teach every client, no weighing scales required.',
+      'A simple visual guide to building balanced everyday meals with protein, vegetables, carbohydrates, and nourishing fats — no calorie counting or weighing scales required.',
   },
   {
     icon: ChefHat,
-    title: 'Healthier Dawat Survival Notes',
+    title: 'Everyday Food Swaps',
     description:
-      'What to eat before, what to choose first, and how to enjoy weddings and dawats without undoing a good week.',
+      'Practical ways to adapt familiar meals, cooking methods, portions, and ingredients without giving up the food that feels like home.',
   },
   {
     icon: CalendarHeart,
-    title: 'Ramzan Nutrition Rhythm',
+    title: 'Eating Well During Busy Weeks',
     description:
-      'Sehri that sustains, iftar that restores — a gentle structure for fasting months, including for those managing diabetes with their doctor.',
+      'Simple meal structure, snack ideas, and planning habits for busy workdays, travel, celebrations, or weeks when cooking feels difficult.',
   },
   {
     icon: Activity,
-    title: 'Reading Your Lab Reports',
+    title: 'Making Sense of Nutrition Goals',
     description:
-      'HbA1c, lipid panels, liver enzymes — what the key numbers mean and which foods genuinely move them.',
+      'A calm, practical guide to setting realistic food, energy, meal-routine, and wellbeing goals that are easier to maintain over time.',
   },
 ];
 
 export const REVIEWS = [
   {
-    name: 'Ayesha K.',
-    location: 'Lahore',
+    location: 'Karachi, Pakistan',
+    condition: 'Healthy Weight Management',
+    rating: 5,
+    quote:
+      'What helped most was that the advice felt doable from the first week. I was not asked to make separate meals or follow a complicated routine. We worked with the food already being cooked at home.',
+  },
+  {
+    location: 'London, United Kingdom',
+    condition: 'Healthy Weight Management',
+    rating: 5,
+    quote:
+      'The sessions were easy to fit around work, and the plan stayed flexible when my week became busy. It felt realistic rather than strict.',
+  },
+  {
+    location: 'Dubai, United Arab Emirates',
+    condition: 'Healthy Weight Gain Support',
+    rating: 5,
+    quote:
+      'Living alone made meal planning difficult, but the suggestions were simple and suited a small kitchen. I now have a more consistent way of eating through the week.',
+  },
+  {
+    location: 'Lahore, Pakistan',
     condition: 'PCOS Support',
     rating: 5,
     quote:
-      'For the first time, a plan that didn’t ask me to abandon my own kitchen. Six months in, my cycles are regular and I’ve lost 9 kg without ever feeling punished.',
+      'I came in expecting another strict diet plan, but the sessions were much more practical than that. Having regular meals and clearer portions made my routine feel less stressful.',
   },
   {
-    name: 'Bilal R.',
-    location: 'Karachi',
-    condition: 'Diabetes Nutrition',
+    location: 'Manchester, United Kingdom',
+    condition: 'Family & Everyday Nutrition',
     rating: 5,
     quote:
-      'My HbA1c dropped from 8.1 to 6.4 in four months. The meal timing advice alone changed everything — and I still eat roti every day.',
+      'The advice still centred on the food we cook at home, our shopping routine, and what was realistic for our family. It never felt generic.',
   },
   {
-    name: 'Fatima & Ahmed S.',
-    location: 'Islamabad',
-    condition: 'Family Wellness',
+    location: 'Abu Dhabi, United Arab Emirates',
+    condition: 'Digestive Health Support',
     rating: 5,
     quote:
-      'She planned around our whole family — the kids’ tiffins, my husband’s cholesterol, my energy dips. One kitchen, one plan, everyone healthier.',
+      'The gradual approach suited me well. Rather than changing everything at once, we made a few adjustments, reviewed what felt helpful, and built from there.',
   },
   {
-    name: 'Mariam T.',
-    location: 'London (online)',
+    location: 'Islamabad, Pakistan',
+    condition: 'Diabetes Nutrition Support',
+    rating: 5,
+    quote:
+      'The meal guidance was explained in a way I could actually use. I understood how to build my plate and plan meals around my work schedule without feeling confused.',
+  },
+  {
+    location: 'Birmingham, United Kingdom',
+    condition: 'Diabetes Nutrition Support',
+    rating: 5,
+    quote:
+      'The guidance helped me feel more confident about everyday food decisions. It was clear, practical, and always framed alongside the care I already receive from my doctor.',
+  },
+  {
+    location: 'Sharjah, United Arab Emirates',
+    condition: 'Heart Health Support',
+    rating: 5,
+    quote:
+      'I wanted help without being told to give up all the food I enjoy. The changes were practical, and I could use them whether I was cooking at home or eating out.',
+  },
+  {
+    location: 'Rawalpindi, Pakistan',
+    condition: 'High Blood Pressure & Heart Health',
+    rating: 5,
+    quote:
+      'The changes were small enough to keep doing. We adjusted oil, salt, and meal portions without losing the flavour of the food my family enjoys.',
+  },
+  {
+    location: 'Leeds, United Kingdom',
+    condition: 'Vegetarian & Plant-Forward Nutrition',
+    rating: 5,
+    quote:
+      'I had been repeating the same few meals every week. The plan gave me more variety and helped me think more clearly about protein and iron sources.',
+  },
+  {
+    location: 'Al Ain, United Arab Emirates',
+    condition: 'General Wellness',
+    rating: 5,
+    quote:
+      'I was not looking for a major diet plan. I needed help getting back to regular meals after a very busy few months. The advice was calm, clear, and easy to follow.',
+  },
+  {
+    location: 'Faisalabad, Pakistan',
+    condition: 'Healthy Weight Gain Support',
+    rating: 5,
+    quote:
+      'I had tried adding random high-calorie foods before, but this gave me more structure. The meal ideas were simple, filling, and easier to keep up with.',
+  },
+  {
+    location: 'Glasgow, United Kingdom',
     condition: 'Pregnancy Nutrition',
     rating: 5,
     quote:
-      'Being guided through each trimester from abroad felt effortless. My iron levels finally stabilised, and the nausea-friendly meal ideas were a lifesaver.',
+      'The meal ideas were realistic for days when my appetite was low and my schedule was unpredictable. I felt listened to and never judged.',
   },
   {
-    name: 'Usman H.',
-    location: 'Dubai (online)',
-    condition: 'Fatty Liver Support',
+    location: 'Dubai, United Arab Emirates',
+    condition: 'Active Lifestyle & Muscle Support',
     rating: 5,
     quote:
-      'My latest ultrasound showed real improvement. The plan was practical for a bachelor’s kitchen — simple cooking, clear portions, no fancy ingredients.',
+      'I wanted simple guidance around protein and meals for training, not a bodybuilder-style plan. The advice fit my exercise routine and regular home food.',
   },
   {
-    name: 'Zainab M.',
-    location: 'Lahore',
-    condition: 'Healthy Weight Loss',
+    location: 'Multan, Pakistan',
+    condition: 'Family & Everyday Nutrition',
     rating: 5,
     quote:
-      'Down 14 kg in eight months and, more importantly, I’ve kept it off for a year. The weekly check-ins kept me honest without ever making me feel judged.',
+      'The best part was not having to cook separate food for everyone. The guidance worked for our shared meals, the children’s lunchboxes, and our normal grocery budget.',
   },
   {
-    name: 'Rashid A.',
-    location: 'Faisalabad',
-    condition: 'Hypertension & Heart Health',
+    location: 'Bradford, United Kingdom',
+    condition: 'PCOS Support',
     rating: 5,
     quote:
-      'My blood pressure readings are the best they’ve been in a decade. Learning to cook with less salt without losing flavour was the real education.',
+      'The consultation felt like a conversation, not a lecture. I left with a routine that suited my workday and ideas for meals I could genuinely see myself making.',
   },
   {
-    name: 'Hira N.',
-    location: 'Toronto (online)',
-    condition: 'Digestive Health',
+    location: 'Abu Dhabi, United Arab Emirates',
+    condition: 'Nutrient Adequacy Support',
     rating: 5,
     quote:
-      'Years of bloating and acidity, finally calm. She found patterns nobody else had bothered to look for, and the fixes were surprisingly simple.',
+      'I finally had a clearer idea of how to improve my everyday food choices. The grocery guidance was especially useful because it made planning feel much less overwhelming.',
+  },
+  {
+    location: 'Peshawar, Pakistan',
+    condition: 'General Wellness',
+    rating: 5,
+    quote:
+      'I had fallen into a pattern of skipping meals and then eating whatever was quickest late at night. The support helped me create a routine that actually works on busy days.',
+  },
+  {
+    location: 'Sheffield, United Kingdom',
+    condition: 'Digestive Health Support',
+    rating: 5,
+    quote:
+      'The suggestions were gradual and easy to test in my normal routine. I appreciated not being given a long list of foods to avoid straight away.',
+  },
+  {
+    location: 'Ajman, United Arab Emirates',
+    condition: 'High Cholesterol Support',
+    rating: 5,
+    quote:
+      'I appreciated that nothing was presented as completely forbidden. I learned more practical ways to plan meals and make better choices without feeling restricted.',
+  },
+  {
+    location: 'Hyderabad, Pakistan',
+    condition: 'High Cholesterol Support',
+    rating: 5,
+    quote:
+      'The portion guidance made more sense than anything I had tried before. It was practical for our family meals and did not require expensive ingredients.',
   },
 ];
 

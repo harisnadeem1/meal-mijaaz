@@ -24,7 +24,7 @@ const ServicesPage = () => (
     />
 
     {/* Intro */}
-    <section className="mx-auto max-w-3xl px-5 py-16 text-center md:px-8 md:py-20">
+    {/* <section className="mx-auto max-w-3xl px-5 py-16 text-center md:px-8 md:py-20">
       <Reveal>
         <p className="text-lg leading-relaxed text-muted-foreground">
           Meal Mizaaj offers one-to-one online nutrition consultations, tailored meal plans, recipe
@@ -32,10 +32,10 @@ const ServicesPage = () => (
           built around your food, your routine, and your health goals, never a generic template.
         </p>
       </Reveal>
-    </section>
+    </section> */}
 
     {/* Service cards */}
-    <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:pb-28">
+    <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 md:py-20">
       <div className="grid gap-6 md:grid-cols-2 md:gap-7">
         {SERVICES.map((service, i) => (
           <Reveal key={service.title} delay={(i % 2) * 0.06}>
@@ -82,36 +82,111 @@ const ServicesPage = () => (
     </section>
 
     {/* What makes your plan personal? */}
-    <section className="bg-sage/35 border-y border-border/60">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <SectionHeading
-          eyebrow="Why it feels different"
-          title="What makes your plan personal?"
-          lead="Your plan is built from the details of your life — not a one-size template. Here is everything we account for before a single meal is written."
-        />
+    {/* Personalisation section */}
+    <section className="relative overflow-hidden border-y border-border/60 bg-sage/35">
+      {/* Quiet decorative shapes */}
+      <div
+        aria-hidden="true"
+        className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-botanical/5 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-gold/10 blur-3xl"
+      />
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border/70 bg-border/70 sm:grid-cols-2 lg:grid-cols-3">
-          {PERSONAL_FACTORS.map((factor, i) => (
-            <Reveal key={factor.title} delay={(i % 3) * 0.06}>
-              <div className="flex h-full flex-col bg-card p-7">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-sage text-primary">
-                  <factor.icon className="h-5 w-5" strokeWidth={1.6} />
-                </span>
-                <h3 className="mt-4 font-serif text-lg font-semibold text-primary">
-                  {factor.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {factor.description}
+      <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          {/* Editorial introduction */}
+          <Reveal>
+            <div className="lg:sticky lg:top-28">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-botanical">
+                Why it feels different
+              </p>
+
+              <h2 className="mt-4 max-w-md font-serif text-3xl font-medium leading-tight text-primary md:text-4xl">
+                A plan shaped around your real life.
+              </h2>
+
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-muted-foreground">
+                Your nutrition support begins with listening. Before suggesting a single meal, we take
+                time to understand the details that make your routine, health needs, and relationship
+                with food entirely your own.
+              </p>
+
+              <div className="mt-8 rounded-2xl border border-primary/10 bg-card/80 p-5 shadow-sm shadow-primary/[0.03] backdrop-blur-sm">
+                <p className="font-serif text-lg leading-snug text-primary">
+                  “No rigid templates. No separate meals for the whole household. Just practical food
+                  guidance that can belong in your life.”
+                </p>
+
+                <div className="mt-5 h-px w-12 bg-gold/80" />
+
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  The result is a flexible approach you can return to long after the consultation is
+                  over.
                 </p>
               </div>
-            </Reveal>
-          ))}
+            </div>
+          </Reveal>
+
+          {/* Personal factors list */}
+          {/* Personal factors list */}
+          <div className="grid overflow-hidden rounded-3xl border border-border/70 bg-card shadow-sm shadow-primary/[0.03] sm:grid-cols-2">
+            {PERSONAL_FACTORS.map((factor, i) => {
+              const isLast = i === PERSONAL_FACTORS.length - 1;
+
+              return (
+                <Reveal
+                  key={factor.title}
+                  delay={(i % 2) * 0.06}
+                  className={[
+                    'border-border/70',
+                    !isLast ? 'border-b' : '',
+                    i % 2 === 0 && !isLast ? 'sm:border-r' : '',
+                    isLast ? 'sm:col-span-2' : '',
+                  ].join(' ')}
+                >
+                  <article
+                    className={[
+                      'group flex h-full gap-4 p-5 transition-colors duration-300 hover:bg-sage/30 md:p-6',
+                      isLast ? 'sm:items-center sm:px-7 sm:py-6' : '',
+                    ].join(' ')}
+                  >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                      <factor.icon className="h-[18px] w-[18px]" strokeWidth={1.6} />
+                    </span>
+
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-semibold tracking-[0.16em] text-gold">
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+
+                        <h3 className="font-serif text-lg font-semibold leading-snug text-primary">
+                          {factor.title}
+                        </h3>
+                      </div>
+
+                      <p
+                        className={[
+                          'mt-2 text-sm leading-relaxed text-muted-foreground',
+                          isLast ? 'sm:max-w-lg' : '',
+                        ].join(' ')}
+                      >
+                        {factor.description}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
 
     {/* CTA block */}
-    <section className="mx-auto max-w-5xl px-5 py-16 md:px-8 md:py-24">
+    <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <Reveal>
         <div className="rounded-3xl bg-primary px-6 py-12 text-center text-primary-foreground md:px-12 md:py-16">
           <h2 className="mx-auto max-w-xl font-serif text-3xl font-medium leading-tight text-balance md:text-4xl">
