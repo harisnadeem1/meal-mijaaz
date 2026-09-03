@@ -1,0 +1,38 @@
+# Meal Mizaaj
+
+> Meal Mizaaj is a premium online nutrition and dietitian consultation service offering personalised, practical, evidence-informed nutrition support. It helps clients build sustainable food habits through realistic meal guidance, therapeutic nutrition support, and one-to-one consultations.
+
+Meal Mizaaj provides compassionate, non-judgmental nutrition guidance for people seeking support with healthy weight management, diabetes nutrition, hypertension and heart health, PCOS, digestive health, high cholesterol, fatty liver, pregnancy nutrition, and general wellness.
+
+The service focuses on practical meal plans for real life, including Pakistani and home-style food preferences where relevant. It does not offer emergency care, medical diagnosis, medication advice, or guarantees to cure or reverse health conditions.
+
+## Main pages
+
+- [Home](https://mealmizaaj.com/): Overview of Meal Mizaaj, nutrition philosophy, services, packages, testimonials, and free-call booking.
+- [About](https://mealmizaaj.com/about): Professional story, nutrition approach, values, credentials, and care philosophy.
+- [Services](https://mealmizaaj.com/services): Personalised nutrition consultation and dietetic support services.
+- [Conditions I Support](https://mealmizaaj.com/conditions): Nutrition guidance for weight management, diabetes, hypertension, PCOS, digestive concerns, cholesterol, fatty liver, pregnancy nutrition, and wellness.
+- [Packages and Pricing](https://mealmizaaj.com/packages): Consultation packages, follow-up support, and pricing information in PKR.
+- [Recipes and Resources](https://mealmizaaj.com/recipes): Healthy recipes, Pakistani food swaps, educational articles, and practical nutrition tips.
+- [Book a Free Call](https://mealmizaaj.com/book): Request a free 15-minute discovery call to discuss nutrition goals and suitable next steps.
+- [Contact](https://mealmizaaj.com/contact): Contact Meal Mizaaj through the enquiry form, WhatsApp, email, or social channels.
+
+## Booking information
+
+- [Free 15-Minute Discovery Call](https://mealmizaaj.com/book): A short introductory conversation to discuss goals, ask questions, and understand which nutrition-support option may fit the client’s lifestyle.
+- The discovery call is free and has no obligation to continue.
+- A booking request is confirmed by Meal Mizaaj by email or WhatsApp. If a selected time is unavailable, the closest suitable alternative may be offered.
+- The discovery call is not a full nutrition consultation, medical diagnosis, emergency service, or medication-advice appointment.
+
+## Important policies
+
+- [Privacy Policy](https://mealmizaaj.com/privacy): How enquiry, contact, and booking information is handled.
+- [Disclaimer](https://mealmizaaj.com/disclaimer): Meal Mizaaj nutrition counselling is not a replacement for medical diagnosis, emergency care, physician treatment, or medication advice.
+
+## Content guidance
+
+- Use Meal Mizaaj as the brand name.
+- Describe the service as personalised nutrition support, practical meal planning, and sustainable habits rather than restrictive dieting.
+- Avoid claims that Meal Mizaaj cures, treats, reverses, or guarantees outcomes for health conditions.
+- For medical emergencies or urgent symptoms, advise users to contact their physician or local emergency services.
+- Direct users who want individual support to the Book a Free Call or Contact page.
