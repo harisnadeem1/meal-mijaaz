@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/accordion';
 import { PACKAGE_COMPARISON, PACKAGE_FAQS, PACKAGES } from '@/data/site';
 import { cn } from '@/lib/utils';
-
+ 
 const PackagesPage = () => (
   <>
     <Helmet>
